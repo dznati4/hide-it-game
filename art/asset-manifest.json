@@ -1,0 +1,765 @@
+{
+  "title": "Hide iT",
+  "brand": "ZanettiZONEai",
+  "blood": false,
+  "units": "meters",
+  "assets": [
+    {
+      "name": "Player_Alex_Orange",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Player_Alex_Orange.fbx",
+      "triangles": 7956,
+      "evaluated_triangles": 7956,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.355,
+        1.801
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Player_Noam_Olive",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Player_Noam_Olive.fbx",
+      "triangles": 6584,
+      "evaluated_triangles": 6584,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.401,
+        1.794
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Player_Maya_Denim",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Player_Maya_Denim.fbx",
+      "triangles": 8124,
+      "evaluated_triangles": 8124,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.42,
+        1.802
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Player_Eli_Cream",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Player_Eli_Cream.fbx",
+      "triangles": 7632,
+      "evaluated_triangles": 7632,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.352,
+        1.801
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Player_Roni_Plum",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Player_Roni_Plum.fbx",
+      "triangles": 8280,
+      "evaluated_triangles": 8280,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.355,
+        1.801
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Security_Navy",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Security_Navy.fbx",
+      "triangles": 8692,
+      "evaluated_triangles": 8692,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.355,
+        1.85
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Guest_Plum",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Guest_Plum.fbx",
+      "triangles": 8340,
+      "evaluated_triangles": 8340,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.42,
+        1.801
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Civilian_Amir_RustJacket",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Civilian_Amir_RustJacket.fbx",
+      "triangles": 8460,
+      "evaluated_triangles": 8460,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.355,
+        1.801
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Civilian_Ben_CreamShirt",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Civilian_Ben_CreamShirt.fbx",
+      "triangles": 7632,
+      "evaluated_triangles": 7632,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.352,
+        1.801
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Civilian_Lior_OliveHoodie",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Civilian_Lior_OliveHoodie.fbx",
+      "triangles": 6584,
+      "evaluated_triangles": 6584,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.401,
+        1.794
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Civilian_Tamar_RoseCardigan",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Civilian_Tamar_RoseCardigan.fbx",
+      "triangles": 8340,
+      "evaluated_triangles": 8340,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.42,
+        1.801
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Civilian_Nora_NavyCoat",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Civilian_Nora_NavyCoat.fbx",
+      "triangles": 8364,
+      "evaluated_triangles": 8364,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.355,
+        1.801
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Civilian_Ruth_TealCoat",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Civilian_Ruth_TealCoat.fbx",
+      "triangles": 8856,
+      "evaluated_triangles": 8856,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.19,
+        0.37,
+        1.801
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 272,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Hotel_Wall_2m",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Hotel_Wall_2m.fbx",
+      "triangles": 324,
+      "evaluated_triangles": 324,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        2.0,
+        0.223,
+        2.8
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Hotel_Floor_2m",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Hotel_Floor_2m.fbx",
+      "triangles": 108,
+      "evaluated_triangles": 108,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        2.0,
+        2.0,
+        0.12
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Parking_Floor_2m",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Parking_Floor_2m.fbx",
+      "triangles": 108,
+      "evaluated_triangles": 108,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        2.0,
+        2.0,
+        0.12
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Doorframe_Clearance_1p5m",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Doorframe_Clearance_1p5m.fbx",
+      "triangles": 756,
+      "evaluated_triangles": 756,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        2.0,
+        0.266,
+        2.8
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Service_Door_HingeOrigin",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Service_Door_HingeOrigin.fbx",
+      "triangles": 276,
+      "evaluated_triangles": 276,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.48,
+        0.213,
+        2.48
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Service_Locker",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Service_Locker.fbx",
+      "triangles": 648,
+      "evaluated_triangles": 648,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        0.75,
+        0.67,
+        1.9
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "FourWheel_CarryTrolley",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\FourWheel_CarryTrolley.fbx",
+      "triangles": 924,
+      "evaluated_triangles": 924,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        0.76,
+        1.15,
+        1.018
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Security_Camera",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Security_Camera.fbx",
+      "triangles": 384,
+      "evaluated_triangles": 384,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        0.18,
+        0.551,
+        0.2
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Parking_Pillar",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Parking_Pillar.fbx",
+      "triangles": 540,
+      "evaluated_triangles": 540,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        0.65,
+        0.674,
+        2.8
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Parking_Barrier_HingeOrigin",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Parking_Barrier_HingeOrigin.fbx",
+      "triangles": 864,
+      "evaluated_triangles": 864,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        2.74,
+        0.417,
+        1.11
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Parked_Hatchback_Blocker",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Parked_Hatchback_Blocker.fbx",
+      "triangles": 1732,
+      "evaluated_triangles": 1732,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.745,
+        3.741,
+        1.41
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Reception_Desk",
+      "kind": "prop",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Reception_Desk.fbx",
+      "triangles": 540,
+      "evaluated_triangles": 540,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.93,
+        0.76,
+        1.54
+      ],
+      "rigged": false,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 0,
+        "max_influences": 0,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      }
+    },
+    {
+      "name": "Body_Blue",
+      "kind": "character",
+      "file": "Assets\\HideIT\\ArtPrototype\\Models\\Body_Blue.fbx",
+      "triangles": 52176,
+      "evaluated_triangles": 52176,
+      "materials": 1,
+      "size_blender_xyz_m": [
+        1.189,
+        0.424,
+        1.814
+      ],
+      "rigged": true,
+      "audit": {
+        "unweighted_vertices": 0,
+        "invalid_weight_vertices": 0,
+        "unknown_groups": 0,
+        "blended_vertices": 2999,
+        "max_influences": 2,
+        "uv_layers": [
+          "PaletteUV"
+        ]
+      },
+      "bone_count": 52,
+      "animations": [
+        "Body_Collapse",
+        "Body_Head_Drag_Loop",
+        "Body_Setting_Down"
+      ],
+      "texture_size": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "palette": {
+    "ink": "#172B36",
+    "navy": "#294759",
+    "teal": "#168A86",
+    "mint": "#9FD9C8",
+    "orange": "#E98645",
+    "cream": "#F2E7CE",
+    "plum": "#795C87",
+    "mustard": "#DBB65E",
+    "skin_light": "#E4B294",
+    "skin_mid": "#BE8466",
+    "skin_dark": "#815942",
+    "hair": "#3A3034",
+    "white": "#F8F3E9",
+    "slate": "#708A92",
+    "concrete": "#A4B3B0",
+    "wood": "#B77E58",
+    "rubber": "#283740",
+    "glass": "#86B3BB",
+    "blue": "#6D98B6",
+    "rose": "#CB8197",
+    "warning": "#E6AA4C",
+    "alert": "#D46458",
+    "floor": "#596D73",
+    "dark_wood": "#755B4D",
+    "olive": "#707B58",
+    "denim": "#506F92",
+    "eye_white": "#E6E0D5",
+    "eye_dark": "#273136",
+    "brass": "#B89C5F",
+    "lip": "#AD796D",
+    "hair_brown": "#654C3F",
+    "rust": "#BA7050",
+    "grey_hair": "#A29E95",
+    "body_fleece": "#29282D",
+    "body_ribbing": "#222127",
+    "body_fleece_edge": "#46434A",
+    "body_jersey": "#C0BDBA",
+    "body_jersey_trim": "#ABA7A5",
+    "body_denim": "#40516D",
+    "body_denim_seam": "#68728A",
+    "body_canvas": "#D6CEBF",
+    "body_sole": "#ACA395",
+    "body_hair": "#34251F",
+    "body_hair_light": "#423028",
+    "body_beard": "#4C352C",
+    "skin_body": "#BA886C",
+    "body_lids": "#784F45",
+    "body_lips": "#A06E62",
+    "body_nail": "#B88478"
+  },
+  "rig_bones": [
+    "Root",
+    "Hips",
+    "Spine",
+    "Chest",
+    "Neck",
+    "Head",
+    "LeftShoulder",
+    "LeftUpperArm",
+    "LeftLowerArm",
+    "LeftHand",
+    "LeftUpperLeg",
+    "LeftLowerLeg",
+    "LeftFoot",
+    "LeftToes",
+    "RightShoulder",
+    "RightUpperArm",
+    "RightLowerArm",
+    "RightHand",
+    "RightUpperLeg",
+    "RightLowerLeg",
+    "RightFoot",
+    "RightToes"
+  ],
+  "selectable_players": [
+    {
+      "id": "Player_Alex_Orange",
+      "name": "Alex"
+    },
+    {
+      "id": "Player_Noam_Olive",
+      "name": "Noam"
+    },
+    {
+      "id": "Player_Maya_Denim",
+      "name": "Maya"
+    },
+    {
+      "id": "Player_Eli_Cream",
+      "name": "Eli"
+    },
+    {
+      "id": "Player_Roni_Plum",
+      "name": "Roni"
+    }
+  ],
+  "ambient_civilians": [
+    {
+      "id": "Civilian_Amir_RustJacket",
+      "name": "Amir"
+    },
+    {
+      "id": "Civilian_Ben_CreamShirt",
+      "name": "Ben"
+    },
+    {
+      "id": "Civilian_Lior_OliveHoodie",
+      "name": "Lior"
+    },
+    {
+      "id": "Civilian_Tamar_RoseCardigan",
+      "name": "Tamar"
+    },
+    {
+      "id": "Civilian_Nora_NavyCoat",
+      "name": "Nora"
+    },
+    {
+      "id": "Civilian_Ruth_TealCoat",
+      "name": "Ruth"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Hide iT lobby concept</title>
+  <desc id="desc">Original interface study. Three ordinary player slots, five cosmetic outfits, and disabled networking examples. Networking is not connected.</desc>
+  <defs>
+    <style>text{font-family:Arial,Helvetica,sans-serif;fill:#eee9de}.muted{fill:#b9bdb8}.small{font-size:28px}.label{font-size:30px}.body{font-size:34px}.name{font-size:38px;font-weight:700}.eyebrow{font-size:27px;letter-spacing:2px;font-weight:700}.stroke{stroke:#8bd0c5;stroke-width:3;fill:none}.disabled{fill:#a8aca7}.line{stroke:#49514f;stroke-width:2}</style>
+    <symbol id="person" viewBox="0 0 250 340">
+      <path d="M94 105 L95 137 L77 149 L76 184 L171 184 L169 149 L150 137 L149 102Z" fill="#b9947f"/>
+      <path d="M75 145 Q95 137 104 149 L125 168 L147 148 Q156 138 175 146 L202 163 L218 253 L196 263 L178 200 L176 319 L72 319 L70 202 L51 263 L29 254 L47 164Z" fill="currentColor"/>
+      <path d="M104 149 L125 168 L147 148 L146 187 L105 187Z" fill="#d7d5cb"/>
+      <path d="M70 202 L80 183 M178 200 L169 182 M125 192 L125 307" stroke="#262e2d" stroke-width="4" opacity=".48"/>
+      <path d="M85 51 Q88 17 124 17 Q163 18 167 53 L164 94 Q151 123 126 124 Q100 122 87 96Z" fill="#c9a58f"/>
+      <path d="M85 69 L82 48 Q88 7 125 10 Q169 13 171 53 L164 76 L158 49 Q124 58 104 41 L91 74Z" fill="#343534"/>
+      <path d="M100 79 L111 78 M140 78 L151 79" stroke="#4b4039" stroke-width="4" stroke-linecap="round"/>
+      <path d="M125 82 L121 98 L128 99 M113 108 Q125 113 138 107" fill="none" stroke="#8b6957" stroke-width="3" stroke-linecap="round"/>
+      <path d="M29 254 L50 261 L47 287 Q42 301 32 295 L25 283Z M197 260 L218 253 L223 283 Q216 301 206 294Z" fill="#c9a58f"/>
+      <path d="M72 307 L176 307 L181 340 L68 340Z" fill="#303a3b"/>
+    </symbol>
+  </defs>
+  <rect width="1920" height="1080" fill="#1c2425"/>
+  <path d="M0 890 L1920 340 L1920 1080 L0 1080Z" fill="#202a2b"/>
+  <path d="M0 926 L1920 376" stroke="#303b3b" stroke-width="2"/>
+  <text x="96" y="100" class="eyebrow" fill="#8bd0c5">ZANETTIZONEai / Hide iT</text>
+  <text x="96" y="168" font-size="58" font-weight="700">Your crew. Your clothes.</text>
+  <text x="96" y="218" class="body muted">Online co-op · Up to 3 players · Appearance only</text>
+  <text x="1824" y="100" text-anchor="end" class="eyebrow muted">04 / LOBBY STUDY</text>
+  <g>
+    <rect x="96" y="266" width="340" height="454" rx="12" fill="#2b3636" stroke="#8bd0c5" stroke-width="3"/>
+    <text x="120" y="310" class="eyebrow">PLAYER 1</text>
+    <rect x="344" y="285" width="66" height="36" rx="6" fill="#384b47"/>
+    <text x="377" y="312" font-size="24" text-anchor="middle">YOU</text>
+    <ellipse cx="266" cy="584" rx="112" ry="16" fill="#192223"/>
+    <use href="#person" x="146" y="329" width="240" height="280" color="#bb7952"/>
+    <path d="M120 630 H412" class="line"/>
+    <text x="120" y="673" class="name">Alex</text>
+    <circle cx="356" cy="664" r="13" class="stroke"/>
+    <text x="120" y="705" font-size="25" class="muted">Orange jacket · Selected</text>
+    <rect x="460" y="266" width="340" height="454" rx="12" fill="#2a3334" stroke="#49514f" stroke-width="2"/>
+    <text x="484" y="310" class="eyebrow muted">PLAYER 2</text>
+    <ellipse cx="630" cy="584" rx="112" ry="16" fill="#192223"/>
+    <use href="#person" x="510" y="329" width="240" height="280" color="#788267"/>
+    <path d="M484 630 H776" class="line"/>
+    <text x="484" y="673" class="name">Noam</text>
+    <text x="484" y="705" font-size="25" class="muted">Olive overshirt · Example</text>
+    <rect x="824" y="266" width="340" height="454" rx="12" fill="#252e2f" stroke="#49514f" stroke-width="2" stroke-dasharray="10 8"/>
+    <text x="848" y="310" class="eyebrow muted">PLAYER 3</text>
+    <path d="M994 403 V477 M957 440 H1031" stroke="#8a9691" stroke-width="5" stroke-linecap="round"/>
+    <text x="994" y="550" text-anchor="middle" class="body muted">Open slot</text>
+    <path d="M848 630 H1140" class="line"/>
+    <text x="848" y="673" class="name muted">Waiting</text>
+    <text x="848" y="705" font-size="25" class="muted">No player connected</text>
+  </g>
+  <g>
+    <rect x="1212" y="266" width="612" height="454" rx="12" fill="#263031" stroke="#49514f" stroke-width="2"/>
+    <text x="1244" y="314" class="eyebrow muted">PRIVATE ROOM / EXAMPLE</text>
+    <text x="1244" y="369" class="label">Room code</text>
+    <text x="1244" y="427" font-size="52" font-weight="700" letter-spacing="7">HIDE-208</text>
+    <text x="1244" y="472" class="small muted">Sample code · Not joinable</text>
+    <path d="M1244 498 H1792" class="line"/>
+    <text x="1244" y="542" class="label">Location</text>
+    <text x="1792" y="542" text-anchor="end" class="body">Hotel / Parking</text>
+    <rect x="1244" y="578" width="254" height="66" rx="8" fill="#303b3c" stroke="#58625e" stroke-width="2"/>
+    <text x="1371" y="621" class="body disabled" text-anchor="middle">Host game</text>
+    <rect x="1518" y="578" width="274" height="66" rx="8" fill="#303b3c" stroke="#58625e" stroke-width="2"/>
+    <text x="1655" y="621" class="body disabled" text-anchor="middle">Join game</text>
+    <text x="1244" y="690" class="small muted">Disabled samples · No online session</text>
+  </g>
+  <text x="96" y="773" class="eyebrow">CHOOSE AN OUTFIT</text>
+  <text x="1164" y="773" class="small muted" text-anchor="end">Five ordinary players · No classes</text>
+  <g>
+    <rect x="96" y="797" width="199" height="76" rx="8" fill="#354641" stroke="#8bd0c5" stroke-width="3"/>
+    <rect x="112" y="817" width="19" height="36" rx="3" fill="#bb7952"/>
+    <text x="148" y="844" class="body">Alex</text><path d="M253 831 L263 841 L279 821" class="stroke"/>
+    <rect x="313" y="797" width="199" height="76" rx="8" fill="#2a3435" stroke="#59635e" stroke-width="2"/>
+    <rect x="329" y="817" width="19" height="36" rx="3" fill="#788267"/><text x="365" y="844" class="body">Noam</text>
+    <rect x="530" y="797" width="199" height="76" rx="8" fill="#2a3435" stroke="#59635e" stroke-width="2"/>
+    <rect x="546" y="817" width="19" height="36" rx="3" fill="#658294"/><text x="582" y="844" class="body">Maya</text>
+    <rect x="747" y="797" width="199" height="76" rx="8" fill="#2a3435" stroke="#59635e" stroke-width="2"/>
+    <rect x="763" y="817" width="19" height="36" rx="3" fill="#d4c8ab"/><text x="799" y="844" class="body">Eli</text>
+    <rect x="964" y="797" width="200" height="76" rx="8" fill="#2a3435" stroke="#59635e" stroke-width="2"/>
+    <rect x="980" y="817" width="19" height="36" rx="3" fill="#8f7386"/><text x="1016" y="844" class="body">Roni</text>
+  </g>
+  <rect x="1212" y="797" width="612" height="76" rx="8" fill="#303b3c" stroke="#58625e" stroke-width="2"/>
+  <text x="1518" y="844" text-anchor="middle" class="body disabled">Start mission — Disabled</text>
+  <text x="1212" y="918" class="small muted">Waiting for a connected room</text>
+  <text x="96" y="918" class="small muted">Outfits are cosmetic. Guard and guest are separate NPC roles.</text>
+  <path d="M96 953 H1824" class="line"/>
+  <text x="96" y="1009" class="label" fill="#8bd0c5">UI concept — networking not connected</text>
+  <text x="1824" y="1009" text-anchor="end" class="small muted">Original vectors · Arial · 1920 × 1080</text>
+</svg>

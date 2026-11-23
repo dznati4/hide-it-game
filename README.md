@@ -1,0 +1,110 @@
+# Hide iT
+
+**ZanettiZONEai** · Unity 6.6 · Windows · work in progress
+
+Build the mechanic, verify it, then move to the next system. Art comes later.
+
+## Current playtest: Asylum / Night Shift
+
+Pick one of five masked characters and move the body from intake to the service exit.
+The central corridor is direct, and the west ward and treatment wing offer routes with cover.
+Three police patrols mark their field of view on the floor. A guard that sees both you and the
+body while you are carrying it turns the cone red and catches you after sustained exposure.
+The roster comes from [Characters PSX by Elbolilloduro](https://elbolilloduro.itch.io/characters-psx).
+The ward uses the free [PSX Asylum Kit by Harning](https://harning.itch.io/psx-asylum-kit).
+
+See the [current export status](EXPORT_STATUS.md) for build and test results.
+
+To play the built prototype directly, double-click **Play Hide iT.cmd**.
+Keep the executable together with all adjacent files in `Builds/Playtest-0.0.8`.
+
+## Open and play
+
+1. Install **Unity 6000.6.10f1** with Windows support through Unity Hub.
+2. Sign in and activate your own Unity license. No paid assets are required.
+3. Add this `hide-it` directory as an existing project in Hub, or double-click `Open Hide iT.cmd`.
+4. If the local art files are missing, follow the import steps below. Choose **Hide iT → Open Playtest**, then press **Play**.
+5. Click a name or use the arrow keys to choose a character, then press Enter or click **Enter Asylum**.
+
+The initial scene is included in the project. The room is generated when Play starts,
+so only a marker in the scene's Hierarchy in Edit mode is expected.
+
+| Control | Action |
+| --- | --- |
+| WASD / mouse | Move / look |
+| Left Shift | Run when not dragging |
+| Left Ctrl or C | Crouch |
+| E | Grab the indicated head, hand, or ankle. Press again to release. |
+| Q | Drop |
+| Hold left mouse | Raise the held limb |
+| V | Switch first / third person |
+| R | Reset body and player |
+| Esc | Pause / resume. Use **Change Character** in the pause menu. |
+
+As soon as the **entire body** enters the green service exit, **LEVEL COMPLETE** appears.
+Press **R** to restart. On the caught screen, **Enter** and the **Restart** button also work.
+
+## Prepare the local character assets
+
+Download the free `Characters_psx_1.2.zip` from the [creator's page](https://elbolilloduro.itch.io/characters-psx).
+Keep the archive intact. In the project folder, run this using Blender's executable or its full path.
+
+```powershell
+blender --background --factory-startup --python-exit-code 1 --python art/blender/import_psx_characters.py -- --pack 'C:\path\Characters_psx_1.2.zip'
+.\scripts\unity.ps1 -Action ImportArt
+```
+
+The pack's license permits game use and prohibits re-uploading the assets, including modified copies.
+The local model and texture folder is omitted from source archives. The import saves an editable local
+ragdoll in `.tools/CharactersPSX/Hide-iT-PSX-Body.blend`. The selected models are listed in
+`art/psx-character-manifest.json`.
+
+Download `PSX_Asylum_Kit_Free_v1.0.zip` from Harning's page and run the importer before building.
+
+```powershell
+.\scripts\import-asylum-kit.ps1 -Archive 'C:\path\PSX_Asylum_Kit_Free_v1.0.zip'
+```
+
+The kit lives in a local-only Unity Resources folder under its game-use license.
+
+## Validate this milestone before adding networking
+
+In Unity: **Window → General → Test Runner → PlayMode → Run All**.
+The physics suite exercises floor collision, joint stability, doorway dragging,
+release/reset, wall occlusion, and whole-body delivery.
+
+From PowerShell (close the editor first):
+
+```powershell
+.\scripts\unity.ps1 -Action ImportArt
+.\scripts\unity.ps1 -Action Test
+.\scripts\unity.ps1 -Action Build
+.\scripts\smoke.ps1
+.\scripts\smoke.ps1 -Lab
+```
+
+For a custom editor location, add `-Editor 'D:\...\Editor\Unity.exe'`.
+Test reports and logs go to `TestResults/`; a successful build goes to
+`Builds/Playtest-0.0.8/Hide iT.exe`. These outputs are ignored by Git.
+Run the executable with `-hideit-lab` to open the original Carry Lab for physics practice.
+
+Manual acceptance:
+
+- Walk, run, and crouch without crossing solid walls.
+- Toggle V near walls and doors; the camera must not leave the room.
+- Drag each hand/ankle, raise and lower it, and release it on the steps.
+- Pull the body through the opening without teleporting any limb.
+- Drag, lift, and crouch with a grip, then release. Check that the hands follow the
+  body, the pose settles on release, and the first-person carry arms appear.
+- Press R while holding; no old joint should remain.
+- Complete delivery, reset, and complete it again.
+- Pause, switch windows, resume, and confirm input/cursor recovery.
+
+## Next milestone
+
+After the offline checks pass: add host-authoritative networking in **the same test room**,
+then verify two real clients holding opposite ends. Only after that comes detection.
+See [the agreed design](docs/GAME_DESIGN.md) and [the milestone gates](docs/MILESTONES.md).
+
+The Carry Lab's props are generated in this project. The local `.tools/` directory holds
+editable source and setup files and is ignored by Git.

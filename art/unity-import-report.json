@@ -1,0 +1,2143 @@
+{
+    "success": true,
+    "utc": "2026-11-23T12:02:51.7245865Z",
+    "unityVersion": "6000.6.10f1",
+    "policy": "Characters PSX 1.2; 22 shared transforms; normalized skin weights; +Z forward, Left -X; point-filtered textures.",
+    "errors": [],
+    "assets": [
+        {
+            "id": "Body_Blue",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Body_Blue.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Body_Blue.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 702,
+            "triangles": 866,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 702,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 1.2545146942138672,
+                "y": 1.7602434158325195,
+                "z": 0.3866070508956909
+            },
+            "minimumMeters": {
+                "x": -0.6256392002105713,
+                "y": 0.04848688840866089,
+                "z": -0.13135719299316406
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.7500000596046448,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.7500000596046448,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.23999997973442078,
+                    "rightX": 0.23999997973442078
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.5299999713897705,
+                    "rightX": 0.5299999713897705
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.14000000059604645,
+                    "rightX": 0.14000000059604645
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.14000000059604645,
+                    "rightX": 0.14000000059604645
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Civilian_Amir_RustJacket",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Civilian_Amir_RustJacket.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Civilian_Amir_RustJacket.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 784,
+            "triangles": 896,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 784,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 0.6729313135147095,
+                "y": 1.7899996042251587,
+                "z": 0.30820244550704956
+            },
+            "minimumMeters": {
+                "x": -0.33646562695503235,
+                "y": -1.1920928955078125e-7,
+                "z": -0.1525254249572754
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.6639575958251953,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.6639575958251953,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.1632000207901001,
+                    "rightX": 0.16320005059242249
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.3037540912628174,
+                    "rightX": 0.3037543296813965
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.09578201919794083,
+                    "rightX": 0.09578203409910202
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.11825750768184662,
+                    "rightX": 0.11825770884752274
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Civilian_Ben_CreamShirt",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Civilian_Ben_CreamShirt.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Civilian_Ben_CreamShirt.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 767,
+            "triangles": 944,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 767,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 0.647413432598114,
+                "y": 1.7899999618530273,
+                "z": 0.3287511467933655
+            },
+            "minimumMeters": {
+                "x": -0.3237067759037018,
+                "y": -4.172325134277344e-7,
+                "z": -0.14156615734100342
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.6419788599014282,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.6419788599014282,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.1564081758260727,
+                    "rightX": 0.1564079225063324
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.2974805235862732,
+                    "rightX": 0.2974803149700165
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.0906476080417633,
+                    "rightX": 0.0906476378440857
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.1155778169631958,
+                    "rightX": 0.1155778244137764
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Civilian_Lior_OliveHoodie",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Civilian_Lior_OliveHoodie.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Civilian_Lior_OliveHoodie.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 1223,
+            "triangles": 980,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 1223,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 0.638382077217102,
+                "y": 1.7899994850158691,
+                "z": 0.34294992685317993
+            },
+            "minimumMeters": {
+                "x": -0.31919097900390625,
+                "y": -5.960464477539063e-8,
+                "z": -0.1552870273590088
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.6426465511322021,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.6426465511322021,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.16400662064552307,
+                    "rightX": 0.16400635242462158
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.282060831785202,
+                    "rightX": 0.282060831785202
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.07830550521612167,
+                    "rightX": 0.07830552011728287
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.0790654644370079,
+                    "rightX": 0.07906556874513626
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Civilian_Nora_NavyCoat",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Civilian_Nora_NavyCoat.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Civilian_Nora_NavyCoat.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 1011,
+            "triangles": 1240,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 1011,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 0.9356334209442139,
+                "y": 1.7899997234344482,
+                "z": 0.33146536350250244
+            },
+            "minimumMeters": {
+                "x": -0.4678165316581726,
+                "y": -5.960464477539063e-8,
+                "z": -0.12216401100158691
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.6001110076904297,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.6001110076904297,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.16478736698627472,
+                    "rightX": 0.16478732228279114
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.37160956859588623,
+                    "rightX": 0.3716099262237549
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.09097965806722641,
+                    "rightX": 0.09097965806722641
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.09740841388702393,
+                    "rightX": 0.09740854054689407
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Civilian_Ruth_TealCoat",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Civilian_Ruth_TealCoat.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Civilian_Ruth_TealCoat.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 923,
+            "triangles": 1072,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 923,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 1.0342038869857788,
+                "y": 1.7899991273880005,
+                "z": 0.29400891065597534
+            },
+            "minimumMeters": {
+                "x": -0.5171020030975342,
+                "y": 0.0,
+                "z": -0.13223880529403687
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.6710939407348633,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.6710939407348633,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.15493923425674438,
+                    "rightX": 0.15493926405906677
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.4451659321784973,
+                    "rightX": 0.4451662302017212
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.090115986764431,
+                    "rightX": 0.090115986764431
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.14848782122135162,
+                    "rightX": 0.14848776161670685
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Civilian_Tamar_RoseCardigan",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Civilian_Tamar_RoseCardigan.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Civilian_Tamar_RoseCardigan.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 945,
+            "triangles": 1116,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 945,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 1.0266501903533936,
+                "y": 1.78999924659729,
+                "z": 0.2863211929798126
+            },
+            "minimumMeters": {
+                "x": -0.5133252739906311,
+                "y": 2.980232238769531e-7,
+                "z": -0.13842755556106567
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.6463280916213989,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.6463280916213989,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.1557072103023529,
+                    "rightX": 0.15570694208145142
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.4445013701915741,
+                    "rightX": 0.44450071454048157
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.09419568628072739,
+                    "rightX": 0.09419570118188858
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.14774002134799957,
+                    "rightX": 0.1477402001619339
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Guest_Plum",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Guest_Plum.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Guest_Plum.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 978,
+            "triangles": 1166,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 978,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 0.8964717388153076,
+                "y": 1.78999924659729,
+                "z": 0.30632835626602173
+            },
+            "minimumMeters": {
+                "x": -0.4482359290122986,
+                "y": 1.1920928955078125e-7,
+                "z": -0.12347149848937988
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.6154191493988037,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.6154191493988037,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.14729085564613342,
+                    "rightX": 0.14729073643684387
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.3513256907463074,
+                    "rightX": 0.351326048374176
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.09531910717487335,
+                    "rightX": 0.09531910717487335
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.06201012432575226,
+                    "rightX": 0.06201024353504181
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Player_Alex_Orange",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Player_Alex_Orange.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Player_Alex_Orange.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 698,
+            "triangles": 876,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 698,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 0.6534984111785889,
+                "y": 1.78999924659729,
+                "z": 0.3421279489994049
+            },
+            "minimumMeters": {
+                "x": -0.3267490863800049,
+                "y": -5.960464477539063e-8,
+                "z": -0.15535449981689453
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.6313221454620361,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.6313221454620361,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.15198037028312683,
+                    "rightX": 0.15198035538196564
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.29112178087234497,
+                    "rightX": 0.2911222577095032
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.08347020298242569,
+                    "rightX": 0.08347021788358688
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.1135685071349144,
+                    "rightX": 0.11356871575117111
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Player_Eli_Cream",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Player_Eli_Cream.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Player_Eli_Cream.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 745,
+            "triangles": 896,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 745,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 0.6434667110443115,
+                "y": 1.7900002002716064,
+                "z": 0.3300015926361084
+            },
+            "minimumMeters": {
+                "x": -0.3217335045337677,
+                "y": -6.556510925292969e-7,
+                "z": -0.14167404174804688
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.7047016024589539,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.7047016024589539,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.1561737060546875,
+                    "rightX": 0.1561736762523651
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.2875896394252777,
+                    "rightX": 0.28758952021598816
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.0927024856209755,
+                    "rightX": 0.09270250052213669
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.11990973353385925,
+                    "rightX": 0.11990970373153687
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Player_Maya_Denim",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Player_Maya_Denim.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Player_Maya_Denim.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 809,
+            "triangles": 956,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 809,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 0.6509150862693787,
+                "y": 1.7899991273880005,
+                "z": 0.34157633781433105
+            },
+            "minimumMeters": {
+                "x": -0.32545748353004456,
+                "y": 5.960464477539063e-7,
+                "z": -0.1520226001739502
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.6362864971160889,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.6362864971160889,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.1684584766626358,
+                    "rightX": 0.16845843195915222
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.2940542697906494,
+                    "rightX": 0.29405438899993896
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.08330103009939194,
+                    "rightX": 0.08330104500055313
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.1123584508895874,
+                    "rightX": 0.11235835403203964
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Player_Noam_Olive",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Player_Noam_Olive.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Player_Noam_Olive.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 719,
+            "triangles": 878,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 719,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 0.6391382217407227,
+                "y": 1.78999924659729,
+                "z": 0.33140093088150024
+            },
+            "minimumMeters": {
+                "x": -0.31956928968429565,
+                "y": -1.1920928955078125e-7,
+                "z": -0.1473712921142578
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.7017009258270264,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.7017009258270264,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.15485523641109467,
+                    "rightX": 0.15485510230064392
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.2930348515510559,
+                    "rightX": 0.2930346131324768
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.10547024756669998,
+                    "rightX": 0.10547026246786118
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.13215872645378113,
+                    "rightX": 0.13215887546539307
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Player_Roni_Plum",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Player_Roni_Plum.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Player_Roni_Plum.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 1281,
+            "triangles": 1504,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 1281,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 1.4180232286453247,
+                "y": 1.7899999618530273,
+                "z": 0.5679684281349182
+            },
+            "minimumMeters": {
+                "x": -0.7090116739273071,
+                "y": -7.152557373046875e-7,
+                "z": -0.21927934885025024
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.7987979054450989,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.7987979054450989,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.2299862951040268,
+                    "rightX": 0.22998617589473724
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.61478590965271,
+                    "rightX": 0.6147855520248413
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.12743838131427765,
+                    "rightX": 0.12743841111660004
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.15373645722866058,
+                    "rightX": 0.15373653173446655
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Security_Navy",
+            "model": "Assets/HideIT/ArtPrototype/CharactersPSX/Models/Security_Navy.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Security_Navy.prefab",
+            "character": true,
+            "valid": true,
+            "vertices": 719,
+            "triangles": 892,
+            "skinnedRenderers": 1,
+            "hierarchyBoneCount": 22,
+            "skinPaletteBones": 22,
+            "weightedVertices": 719,
+            "weightedBones": 21,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 1.1920928955078125e-7,
+            "sizeMeters": {
+                "x": 0.6400859355926514,
+                "y": 1.7899997234344482,
+                "z": 0.35462307929992676
+            },
+            "minimumMeters": {
+                "x": -0.3200429677963257,
+                "y": -2.384185791015625e-7,
+                "z": -0.1761695146560669
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.6524323225021362,
+                "z": 0.399999737739563
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.6524323225021362,
+                "z": 0.399999737739563
+            },
+            "boneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "skinBoneNames": [
+                "Root",
+                "Hips",
+                "Spine",
+                "Chest",
+                "Neck",
+                "Head",
+                "LeftShoulder",
+                "LeftUpperArm",
+                "LeftLowerArm",
+                "LeftHand",
+                "RightShoulder",
+                "RightUpperArm",
+                "RightLowerArm",
+                "RightHand",
+                "LeftUpperLeg",
+                "LeftLowerLeg",
+                "LeftFoot",
+                "LeftToes",
+                "RightUpperLeg",
+                "RightLowerLeg",
+                "RightFoot",
+                "RightToes"
+            ],
+            "unusedHierarchyBones": [],
+            "orientation": [
+                {
+                    "pair": "UpperArm",
+                    "leftX": -0.16867315769195557,
+                    "rightX": 0.16867288947105408
+                },
+                {
+                    "pair": "Hand",
+                    "leftX": -0.2809489369392395,
+                    "rightX": 0.2809487581253052
+                },
+                {
+                    "pair": "UpperLeg",
+                    "leftX": -0.07497356086969376,
+                    "rightX": 0.07497357577085495
+                },
+                {
+                    "pair": "Foot",
+                    "leftX": -0.08180226385593414,
+                    "rightX": 0.08180242031812668
+                }
+            ],
+            "errors": []
+        },
+        {
+            "id": "Doorframe_Clearance_1p5m",
+            "model": "Assets/HideIT/ArtPrototype/Models/Doorframe_Clearance_1p5m.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Doorframe_Clearance_1p5m.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 1512,
+            "triangles": 756,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 2.0,
+                "y": 2.799999952316284,
+                "z": 0.26599979400634766
+            },
+            "minimumMeters": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": -0.10000014305114746
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "FourWheel_CarryTrolley",
+            "model": "Assets/HideIT/ArtPrototype/Models/FourWheel_CarryTrolley.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/FourWheel_CarryTrolley.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 1608,
+            "triangles": 924,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 0.7599999904632568,
+                "y": 1.0174999237060547,
+                "z": 1.1499998569488525
+            },
+            "minimumMeters": {
+                "x": -0.3799999952316284,
+                "y": 0.009999990463256836,
+                "z": -0.574999988079071
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "Hotel_Floor_2m",
+            "model": "Assets/HideIT/ArtPrototype/Models/Hotel_Floor_2m.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Hotel_Floor_2m.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 216,
+            "triangles": 108,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 2.0,
+                "y": 0.12000024318695068,
+                "z": 1.9999998807907104
+            },
+            "minimumMeters": {
+                "x": -2.0,
+                "y": -0.12000024318695068,
+                "z": -1.9999998807907104
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "Hotel_Wall_2m",
+            "model": "Assets/HideIT/ArtPrototype/Models/Hotel_Wall_2m.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Hotel_Wall_2m.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 648,
+            "triangles": 324,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 2.0,
+                "y": 2.799999713897705,
+                "z": 0.22250020503997803
+            },
+            "minimumMeters": {
+                "x": -2.0,
+                "y": 0.0,
+                "z": -0.18000030517578125
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "Parked_Hatchback_Blocker",
+            "model": "Assets/HideIT/ArtPrototype/Models/Parked_Hatchback_Blocker.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Parked_Hatchback_Blocker.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 3240,
+            "triangles": 1732,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 1.744999885559082,
+                "y": 1.409999966621399,
+                "z": 3.740999937057495
+            },
+            "minimumMeters": {
+                "x": -0.8725000023841858,
+                "y": 0.01999986171722412,
+                "z": -1.8700000047683716
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "Parking_Barrier_HingeOrigin",
+            "model": "Assets/HideIT/ArtPrototype/Models/Parking_Barrier_HingeOrigin.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Parking_Barrier_HingeOrigin.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 1728,
+            "triangles": 864,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 2.740000009536743,
+                "y": 1.1099997758865356,
+                "z": 0.4174998998641968
+            },
+            "minimumMeters": {
+                "x": -2.5799999237060547,
+                "y": 0.0,
+                "z": -0.19000005722045898
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "Parking_Floor_2m",
+            "model": "Assets/HideIT/ArtPrototype/Models/Parking_Floor_2m.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Parking_Floor_2m.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 216,
+            "triangles": 108,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 2.0,
+                "y": 0.12000024318695068,
+                "z": 1.9999998807907104
+            },
+            "minimumMeters": {
+                "x": -2.0,
+                "y": -0.12000024318695068,
+                "z": -1.9999998807907104
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "Parking_Pillar",
+            "model": "Assets/HideIT/ArtPrototype/Models/Parking_Pillar.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Parking_Pillar.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 1080,
+            "triangles": 540,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 0.6499999761581421,
+                "y": 2.8000001907348633,
+                "z": 0.6740002036094666
+            },
+            "minimumMeters": {
+                "x": -0.32499995827674866,
+                "y": -1.1920928955078125e-7,
+                "z": -0.3250002861022949
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "Reception_Desk",
+            "model": "Assets/HideIT/ArtPrototype/Models/Reception_Desk.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Reception_Desk.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 1080,
+            "triangles": 540,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 1.9299999475479126,
+                "y": 1.5399998426437378,
+                "z": 0.7599999904632568
+            },
+            "minimumMeters": {
+                "x": -0.9649999737739563,
+                "y": 0.0,
+                "z": -0.38000011444091797
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "Security_Camera",
+            "model": "Assets/HideIT/ArtPrototype/Models/Security_Camera.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Security_Camera.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 744,
+            "triangles": 384,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 0.18000000715255737,
+                "y": 0.19999998807907104,
+                "z": 0.5509999990463257
+            },
+            "minimumMeters": {
+                "x": -0.09000000357627869,
+                "y": 0.09999996423721313,
+                "z": -0.20750002562999725
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "Service_Door_HingeOrigin",
+            "model": "Assets/HideIT/ArtPrototype/Models/Service_Door_HingeOrigin.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Service_Door_HingeOrigin.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 528,
+            "triangles": 276,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 1.4800000190734863,
+                "y": 2.4799997806549072,
+                "z": 0.21250009536743164
+            },
+            "minimumMeters": {
+                "x": -1.4800000190734863,
+                "y": 0.0,
+                "z": -0.04250025749206543
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        },
+        {
+            "id": "Service_Locker",
+            "model": "Assets/HideIT/ArtPrototype/Models/Service_Locker.fbx",
+            "prefab": "Assets/HideIT/Resources/ArtPrototype/Service_Locker.prefab",
+            "character": false,
+            "valid": true,
+            "vertices": 1296,
+            "triangles": 648,
+            "skinnedRenderers": 0,
+            "hierarchyBoneCount": 0,
+            "skinPaletteBones": 0,
+            "weightedVertices": 0,
+            "weightedBones": 0,
+            "yawCorrection": 0.0,
+            "maximumWeightSumError": 0.0,
+            "sizeMeters": {
+                "x": 0.7500000596046448,
+                "y": 1.9000000953674316,
+                "z": 0.6700000762939453
+            },
+            "minimumMeters": {
+                "x": -0.375,
+                "y": -5.960464477539063e-8,
+                "z": -0.3000001907348633
+            },
+            "importedRootScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "forwardBefore": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "forwardAfter": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "boneNames": [],
+            "skinBoneNames": [],
+            "unusedHierarchyBones": [],
+            "orientation": [],
+            "errors": []
+        }
+    ]
+}

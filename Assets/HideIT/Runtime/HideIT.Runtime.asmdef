@@ -1,0 +1,6 @@
+{
+  "name": "HideIT.Runtime",
+  "rootNamespace": "HideIT",
+  "references": [],
+  "autoReferenced": true
+}

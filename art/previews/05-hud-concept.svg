@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Hide iT mission HUD concept</title>
+  <desc id="desc">Original hotel corridor scene and proposed HUD, showing suspicion, contextual head grip, and a separate chase and arrest rescue state reference. All AI states are proposed.</desc>
+  <defs>
+    <style>text{font-family:Arial,Helvetica,sans-serif;fill:#eee9de}.muted{fill:#bac1bb}.body{font-size:34px}.small{font-size:28px}.label{font-size:30px}.eyebrow{font-size:26px;letter-spacing:1.6px;font-weight:700}.stroke{fill:none;stroke:#eee9de;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.rule{stroke:#53615d;stroke-width:2}.teal{fill:#8bd0c5}.amber{fill:#e5bf76}</style>
+    <symbol id="eye" viewBox="0 0 60 40"><path d="M3 20 Q30 -7 57 20 Q30 47 3 20Z" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="30" cy="20" r="8" fill="currentColor"/></symbol>
+    <symbol id="alert" viewBox="0 0 52 48"><path d="M26 4 L49 43 H3Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M26 17 V29" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="26" cy="36" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="cuffs" viewBox="0 0 64 48"><circle cx="17" cy="29" r="13" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="49" cy="29" r="13" fill="none" stroke="currentColor" stroke-width="4"/><path d="M20 15 Q32 -3 46 15" fill="none" stroke="currentColor" stroke-width="4"/></symbol>
+  </defs>
+  <rect width="1920" height="1080" fill="#3b4240"/>
+  <!-- Original quiet architectural staging, not a captured game scene. -->
+  <path d="M0 0 H1920 L1170 394 H745Z" fill="#535a54"/>
+  <path d="M0 0 L745 394 V690 L0 1080Z" fill="#696c60"/>
+  <path d="M1920 0 L1170 394 V690 L1920 1080Z" fill="#575d54"/>
+  <path d="M0 1080 L745 690 H1170 L1920 1080Z" fill="#4c5049"/>
+  <path d="M745 394 H1170 V690 H745Z" fill="#3c4743"/>
+  <path d="M802 409 H1122 V691 H802Z" fill="#283b38"/>
+  <path d="M802 409 H1122 V430 H822 V691 H802Z" fill="#84948b"/>
+  <rect x="884" y="445" width="164" height="48" rx="4" fill="#334c44"/>
+  <text x="966" y="479" font-size="26" text-anchor="middle" fill="#d4ddd0">SERVICE</text>
+  <path d="M175 149 L329 226 V907 L175 988Z" fill="#303a36"/>
+  <path d="M189 181 L309 245 V893 L189 954Z" fill="#555a4b"/>
+  <path d="M492 309 L571 348 V777 L492 819Z" fill="#333e38"/>
+  <path d="M504 337 L557 363 V769 L504 796Z" fill="#5a6051"/>
+  <path d="M1704 146 L1520 244 V906 L1704 1008Z" fill="#343f3a"/>
+  <path d="M1687 182 L1536 262 V892 L1687 972Z" fill="#50584c"/>
+  <path d="M0 940 L745 652 M1170 652 L1920 940" stroke="#929483" stroke-width="10"/>
+  <path d="M0 1080 L796 690 M1920 1080 L1125 690" stroke="#393f38" stroke-width="5"/>
+  <path d="M652 52 L1275 52 L1172 105 H744Z" fill="#b9b8a0" opacity=".75"/>
+  <path d="M834 260 H1088 L1056 278 H860Z" fill="#b9b8a0" opacity=".6"/>
+  <path d="M900 355 H1028 L1016 364 H911Z" fill="#b9b8a0" opacity=".5"/>
+  <!-- Intact clothed carry subject; no blood, wound, or health imagery. -->
+  <ellipse cx="1005" cy="749" rx="244" ry="41" fill="#26332e" opacity=".75"/>
+  <path d="M876 713 L801 741 L749 762 L737 744 L792 710 L852 681Z" fill="#48575f" stroke="#25342f" stroke-width="4"/>
+  <path d="M879 701 L801 701 L739 723 L730 705 L796 671 L875 666Z" fill="#52636b" stroke="#25342f" stroke-width="4"/>
+  <path d="M739 704 L718 700 L701 710 L707 729 L744 727Z M741 745 L718 747 L710 768 L753 779 L761 765Z" fill="#2d3433"/>
+  <path d="M865 657 Q925 636 990 658 L1060 689 L1039 740 L949 729 L863 724Z" fill="#b6ae91" stroke="#39443b" stroke-width="4"/>
+  <path d="M913 653 L949 712 L1009 764 L1025 748 L980 692 L960 650Z" fill="#c2b79b" stroke="#636a5c" stroke-width="3"/>
+  <path d="M1008 758 L1025 748 L1050 761 L1047 773 L1026 776Z" fill="#b8947d"/>
+  <path d="M1035 689 L1067 688 L1084 702 L1070 733 L1039 729Z" fill="#ba977f"/>
+  <path d="M1066 686 Q1102 662 1126 694 Q1149 728 1117 749 Q1095 761 1075 736 L1068 718Z" fill="#c6a58c" stroke="#716859" stroke-width="3"/>
+  <path d="M1070 693 Q1103 656 1128 692 L1135 712 L1115 708 L1103 687 L1084 711Z" fill="#414641"/>
+  <path d="M1102 726 L1115 730" stroke="#6b5b4e" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="1099" cy="703" r="35" fill="none" stroke="#8bd0c5" stroke-width="4"/>
+  <circle cx="1099" cy="703" r="4" fill="#eee9de"/>
+  <path d="M1099 742 L1055 784" stroke="#8bd0c5" stroke-width="3"/>
+  <!-- Active HUD: objective, one threat state, crew, one action prompt. -->
+  <rect x="96" y="54" width="485" height="148" rx="10" fill="#202a2a"/>
+  <text x="122" y="95" class="eyebrow muted">OBJECTIVE / EXAMPLE</text>
+  <text x="122" y="142" font-size="40" font-weight="700">Hide the body</text>
+  <text x="122" y="181" class="small muted">Destination: Service room</text>
+  <rect x="630" y="54" width="610" height="148" rx="10" fill="#202a2a" stroke="#bda064" stroke-width="2"/>
+  <use href="#eye" x="656" y="85" width="58" height="42" color="#e5bf76"/>
+  <text x="734" y="120" font-size="36" class="amber" font-weight="700">Guard suspicious</text>
+  <rect x="656" y="151" width="558" height="16" rx="4" fill="#4d5549"/>
+  <rect x="656" y="151" width="248" height="16" rx="4" fill="#e5bf76"/>
+  <path d="M768 151 V167 M879 151 V167 M991 151 V167 M1103 151 V167" stroke="#202a2a" stroke-width="4"/>
+  <rect x="1290" y="54" width="534" height="148" rx="10" fill="#202a2a"/>
+  <text x="1318" y="98" class="eyebrow muted">05 / HUD STUDY</text>
+  <text x="1318" y="144" class="label">All AI states are proposed</text>
+  <text x="1318" y="180" font-size="26" class="muted">Illustrated scene · No live AI</text>
+  <!-- Separate reference rail, not simultaneous in-game notifications. -->
+  <rect x="1380" y="302" width="444" height="411" rx="10" fill="#202a2a" stroke="#53615d" stroke-width="2"/>
+  <text x="1404" y="345" class="eyebrow muted">STATE EXAMPLES</text>
+  <text x="1404" y="381" font-size="26" class="muted">Alternative states · Proposed</text>
+  <path d="M1404 404 H1800" class="rule"/>
+  <use href="#alert" x="1404" y="424" width="44" height="43" color="#ed9a8b"/>
+  <text x="1465" y="456" class="body" fill="#ed9a8b">Spotted — Chase</text>
+  <text x="1404" y="496" font-size="26" class="muted">Red + icon + directional marker</text>
+  <path d="M1404 521 H1800" class="rule"/>
+  <use href="#cuffs" x="1403" y="539" width="52" height="41" color="#eee9de"/>
+  <text x="1470" y="573" class="body">Maya · Arrested</text>
+  <rect x="1404" y="599" width="48" height="48" rx="6" fill="#384b47" stroke="#8bd0c5" stroke-width="2"/>
+  <text x="1428" y="634" font-size="30" text-anchor="middle">E</text>
+  <text x="1470" y="634" class="body teal">Rescue Maya</text>
+  <text x="1404" y="686" font-size="26" class="muted">Only at a valid rescue interaction</text>
+  <rect x="96" y="765" width="444" height="207" rx="10" fill="#202a2a"/>
+  <text x="122" y="806" class="eyebrow muted">CREW / EXAMPLE</text>
+  <circle cx="137" cy="843" r="15" fill="#bb7952"/><text x="132" y="852" font-size="23">1</text>
+  <text x="169" y="854" class="label">Alex · Free</text>
+  <circle cx="137" cy="891" r="15" fill="#788267"/><text x="130" y="899" font-size="23">2</text>
+  <text x="169" y="902" class="label">Noam · Carrying</text>
+  <circle cx="137" cy="939" r="15" fill="#658294"/><text x="130" y="947" font-size="23">3</text>
+  <text x="169" y="950" class="label">Maya · Free</text>
+  <rect x="588" y="784" width="744" height="188" rx="12" fill="#202a2a" stroke="#8bd0c5" stroke-width="2"/>
+  <rect x="616" y="813" width="62" height="62" rx="8" fill="#384b47" stroke="#8bd0c5" stroke-width="2"/>
+  <text x="647" y="858" text-anchor="middle" font-size="38" font-weight="700">E</text>
+  <text x="702" y="858" font-size="42" font-weight="700">Grab head</text>
+  <text x="616" y="913" class="label muted">While holding: Q Drop · Hold LMB Raise</text>
+  <text x="616" y="951" font-size="26" class="muted">Head grip proposed · Hand / ankle grips exist</text>
+  <rect x="1380" y="889" width="444" height="83" rx="10" fill="#202a2a"/>
+  <rect x="1404" y="907" width="48" height="48" rx="6" fill="#384b47" stroke="#8bd0c5" stroke-width="2"/>
+  <text x="1428" y="941" text-anchor="middle" font-size="30">V</text>
+  <text x="1470" y="942" class="body">Switch view</text>
+  <rect x="96" y="989" width="1728" height="37" rx="4" fill="#202a2a"/>
+  <text x="112" y="1016" font-size="26" class="muted">UI concept · AI / chase / arrest / rescue not implemented · No blood · State rail is review material only</text>
+</svg>

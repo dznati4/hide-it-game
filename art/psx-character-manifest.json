@@ -1,0 +1,86 @@
+{
+  "Player_Alex_Orange": {
+    "source": "Character_Killer",
+    "triangles": 876,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Player_Noam_Olive": {
+    "source": "Character_Killer_01",
+    "triangles": 878,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Player_Maya_Denim": {
+    "source": "Character_Killer_03",
+    "triangles": 956,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Player_Eli_Cream": {
+    "source": "Character_Killer_07",
+    "triangles": 896,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Player_Roni_Plum": {
+    "source": "Character_Killer_10",
+    "triangles": 1504,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Body_Blue": {
+    "source": "Character_01",
+    "triangles": 866,
+    "bones": 22,
+    "height_m": 1.7602
+  },
+  "Security_Navy": {
+    "source": "Character_18_Police",
+    "triangles": 892,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Guest_Plum": {
+    "source": "Character_Female_03",
+    "triangles": 1166,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Civilian_Amir_RustJacket": {
+    "source": "Character_09",
+    "triangles": 896,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Civilian_Ben_CreamShirt": {
+    "source": "Character_11",
+    "triangles": 944,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Civilian_Lior_OliveHoodie": {
+    "source": "Character_16",
+    "triangles": 980,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Civilian_Tamar_RoseCardigan": {
+    "source": "Character_Female_14",
+    "triangles": 1116,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Civilian_Nora_NavyCoat": {
+    "source": "Character_Female_13",
+    "triangles": 1240,
+    "bones": 22,
+    "height_m": 1.79
+  },
+  "Civilian_Ruth_TealCoat": {
+    "source": "Character_Female_06",
+    "triangles": 1072,
+    "bones": 22,
+    "height_m": 1.79
+  }
+}

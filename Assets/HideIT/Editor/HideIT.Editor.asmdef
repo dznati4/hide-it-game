@@ -1,0 +1,7 @@
+{
+  "name": "HideIT.Editor",
+  "rootNamespace": "HideIT.Editor",
+  "references": ["HideIT.Runtime"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

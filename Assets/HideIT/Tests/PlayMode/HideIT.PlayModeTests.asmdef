@@ -1,0 +1,7 @@
+{
+  "name": "HideIT.PlayModeTests",
+  "rootNamespace": "HideIT.Tests",
+  "references": ["HideIT.Runtime"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}
