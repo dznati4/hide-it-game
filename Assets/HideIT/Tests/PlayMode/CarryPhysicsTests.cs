@@ -228,7 +228,11 @@ namespace HideIT.Tests
         public IEnumerator LevelCompletesWhenEntireBodyEntersWhilePlayerStaysOutsideAndHoldsIt()
         {
             root.SetActive(false);
-            var lab = new GameObject("Delivery test").AddComponent<CarryLabBootstrap>();
+            var legacy = new GameObject("Delivery test");
+            legacy.SetActive(false);
+            var lab = legacy.AddComponent<CarryLabBootstrap>();
+            lab.LegacyMode = true;
+            legacy.SetActive(true);
             var zone = lab.DropZone;
             try
             {

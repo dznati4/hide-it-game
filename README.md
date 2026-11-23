@@ -6,17 +6,21 @@ Build the mechanic, verify it, then move to the next system. Art comes later.
 
 ## Current playtest: Asylum / Night Shift
 
-Pick one of five masked characters and move the body from intake to the service exit.
-The central corridor is direct, and the west ward and treatment wing offer routes with cover.
-Three police patrols mark their field of view on the floor. A guard that sees both you and the
-body while you are carrying it turns the cone red and catches you after sustained exposure.
+Pick one of five masked characters and stash the body in the service dumpster.
+The central corridor is the shortest route. The west ward and treatment wing give you more
+cover, and all routes to the dumpster cross a patrol area.
+
+The floor cones show where guards can see. When a guard spots you, the cone turns red and the
+guard gives chase. Break line of sight before hiding in a closet or under a bed. Guards who see
+you enter a hiding spot can catch you there. A guard who spots the unattended body investigates
+it. Throw a rock to draw nearby guards to the impact for a few seconds.
 The roster comes from [Characters PSX by Elbolilloduro](https://elbolilloduro.itch.io/characters-psx).
 The ward uses the free [PSX Asylum Kit by Harning](https://harning.itch.io/psx-asylum-kit).
 
 See the [current export status](EXPORT_STATUS.md) for build and test results.
 
 To play the built prototype directly, double-click **Play Hide iT.cmd**.
-Keep the executable together with all adjacent files in `Builds/Playtest-0.0.8`.
+Keep the executable together with all adjacent files in `Builds/Playtest-0.0.9`.
 
 ## Open and play
 
@@ -34,15 +38,17 @@ so only a marker in the scene's Hierarchy in Edit mode is expected.
 | WASD / mouse | Move / look |
 | Left Shift | Run when not dragging |
 | Left Ctrl or C | Crouch |
-| E | Grab the indicated head, hand, or ankle. Press again to release. |
+| E | Use the action shown on screen. Grab or release a limb, hide or leave cover, pick up rocks, or stash the body. |
 | Q | Drop |
 | Hold left mouse | Raise the held limb |
+| G | Throw a rock in the direction you are looking |
 | V | Switch first / third person |
-| R | Reset body and player |
-| Esc | Pause / resume. Use **Change Character** in the pause menu. |
+| R | Restart the mission |
+| Esc | Pause / resume. Open **Controls** or **Change Character** from the pause menu. |
 
-As soon as the **entire body** enters the green service exit, **LEVEL COMPLETE** appears.
-Press **R** to restart. On the caught screen, **Enter** and the **Restart** button also work.
+You start with three rocks. Aim at where you want them to land and look for refills around the ward.
+Carry the body to the front of the dumpster and press **E** when **Stash body** appears.
+**LEVEL COMPLETE** appears when the lid closes. Use **R**, **Enter**, or **Restart** to play again.
 
 ## Prepare the local character assets
 
@@ -85,7 +91,7 @@ From PowerShell (close the editor first):
 
 For a custom editor location, add `-Editor 'D:\...\Editor\Unity.exe'`.
 Test reports and logs go to `TestResults/`; a successful build goes to
-`Builds/Playtest-0.0.8/Hide iT.exe`. These outputs are ignored by Git.
+`Builds/Playtest-0.0.9/Hide iT.exe`. These outputs are ignored by Git.
 Run the executable with `-hideit-lab` to open the original Carry Lab for physics practice.
 
 Manual acceptance:
@@ -97,13 +103,15 @@ Manual acceptance:
 - Drag, lift, and crouch with a grip, then release. Check that the hands follow the
   body, the pose settles on release, and the first-person carry arms appear.
 - Press R while holding; no old joint should remain.
-- Complete delivery, reset, and complete it again.
+- Throw a rock away from your route and watch a nearby guard investigate the impact.
+- Break sight before hiding and wait for the guard to resume patrol.
+- Stash the body in the dumpster, restart, and complete the mission again.
 - Pause, switch windows, resume, and confirm input/cursor recovery.
 
 ## Next milestone
 
 After the offline checks pass: add host-authoritative networking in **the same test room**,
-then verify two real clients holding opposite ends. Only after that comes detection.
+then verify two real clients holding opposite ends. Then bring the Asylum mission online.
 See [the agreed design](docs/GAME_DESIGN.md) and [the milestone gates](docs/MILESTONES.md).
 
 The Carry Lab's props are generated in this project. The local `.tools/` directory holds

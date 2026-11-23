@@ -1,29 +1,19 @@
-# Hide iT 0.0.8 · 23 November 2026
+# Hide iT 0.0.9 · Windows playtest
 
-**Asylum / Night Shift** is the default offline mission. Choose Alex, Noam, Maya,
-Eli, or Roni, then select **Enter Asylum**. Open **Esc → Change Character** to
-switch outfits during the mission. This preserves the current run and saves the
-new outfit for the next launch.
+**Asylum / Night Shift** is the default offline mission. Choose a character and select
+**Enter Asylum**. The main and pause menus include **Controls**. You can change your
+character from the pause menu without restarting the mission.
 
-Intake is a safe starting room. The central hall is the shortest approach to the
-service exit. The west ward has offset doorways and sight breaks. The treatment
-wing has a longer service passage beside the patrol route. The green outline
-in the service hall marks the delivery area.
+Carry the body from intake to the service dumpster. Press **E** when **Stash body**
+appears. The mission completes after the lid closes. Use **R**, **Enter**, or
+**Restart** to try again.
 
-Three police officers patrol the central hall, west ward, and treatment wing.
-Their amber field of view follows their facing and stops at walls. When an
-officer sees the player and the body during a grab, the cone turns red. Sustained
-exposure triggers **Caught**. Restart with **R**, **Enter**, or the restart button.
+Patrol cones show where guards can see. A guard who sees you gives chase and must
+catch up to stop your run. Hide in a closet or under a marked bed after breaking
+line of sight. Guards can catch you if they see you enter. Press **G** to throw a
+rock and draw nearby guards to the impact, including guards inspecting the body.
 
-Press **E** to grab the head, hand, or ankle. **Q** releases, **V** changes camera,
-and holding left mouse raises the grip. **LEVEL COMPLETE** appears when the
-entire body enters the delivery area.
+The Windows archive includes the playable build. The source checkout requires the
+local character and environment packs listed in [README](README.md).
 
-The scene uses the free [PSX Asylum Kit by Harning](https://harning.itch.io/psx-asylum-kit)
-and [Characters PSX by Elbolilloduro](https://elbolilloduro.itch.io/characters-psx).
-See [README](README.md) for local asset import. The Windows archive includes the game.
-
-The new standalone check covers the kit render, wall occlusion, safe empty-handed
-passage, capture, restart, a pause-menu outfit change, and delivery via the service
-route with all three patrols active. The original Carry Lab and its animation
-regression check are available with the `-hideit-lab` launch flag.
+Launch with `-hideit-lab` to open the original physics and animation training room.

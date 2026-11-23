@@ -36,6 +36,9 @@ namespace HideIT
         readonly List<Renderer> avatarRenderers = new List<Renderer>();
         float verticalSpeed;
         Vector3 previousPosition;
+        Vector3? hidingView;
+        internal AsylumInteractions Interactions { get; set; }
+        public Vector3 SightPoint => transform.position + Vector3.up*(Crouched ? .87f : 1.26f);
         const int WorldMask = 1 << 0;
 
         public void Build(RagdollBody body)
@@ -102,7 +105,7 @@ namespace HideIT
             outfitPose.Initialize();
             avatarRenderers.Clear();
             avatarRenderers.AddRange(outfitModel.GetComponentsInChildren<Renderer>());
-            foreach (var renderer in avatarRenderers) renderer.enabled = !FirstPerson;
+            foreach (var renderer in avatarRenderers) renderer.enabled = !FirstPerson && !hidingView.HasValue;
             var skin = outfitModel.GetComponentInChildren<SkinnedMeshRenderer>();
             viewArms = skin != null && skin.sharedMesh.isReadable ? FirstPersonCarryArms.Create(skin) : null;
             OutfitId = id;
@@ -114,6 +117,11 @@ namespace HideIT
             if (!InputEnabled) return;
             Yaw += Input.GetAxisRaw("Mouse X") * 2.4f;
             Pitch = Mathf.Clamp(Pitch - Input.GetAxisRaw("Mouse Y") * 2.4f, -55, 72);
+            if (hidingView.HasValue || (Interactions != null && Interactions.Stashing))
+            {
+                if (Input.GetKeyDown(KeyCode.E) && Interactions != null) Interactions.Interact();
+                return;
+            }
             if (Input.GetKeyDown(KeyCode.V))
             {
                 ToggleCamera();
@@ -132,8 +140,11 @@ namespace HideIT
             controller.Move((direction * CurrentSpeed + Vector3.up * verticalSpeed) * Time.deltaTime);
 
             if (Input.GetKeyDown(KeyCode.Q)) Release();
+            if (Input.GetKeyDown(KeyCode.G) && Interactions != null)
+                Interactions.ThrowRock(Quaternion.Euler(Pitch,Yaw,0)*Vector3.forward);
             if (Input.GetKeyDown(KeyCode.E))
             {
+                if (Interactions != null && Interactions.Interact()) return;
                 if (Holding) Release();
                 else if (TryFindGrip(out var grip)) Grab(grip);
             }
@@ -180,6 +191,11 @@ namespace HideIT
         void UpdateCamera(bool snap)
         {
             var rotation = Quaternion.Euler(Pitch, Yaw, 0);
+            if (hidingView.HasValue)
+            {
+                View.transform.SetPositionAndRotation(hidingView.Value,rotation);
+                return;
+            }
             var pivot = transform.position + Vector3.up * (Crouched ? 1.05f : 1.62f);
             Vector3 desired;
             if (FirstPerson) desired = pivot + Quaternion.Euler(0, Yaw, 0) * Vector3.forward * .12f;
@@ -195,6 +211,13 @@ namespace HideIT
             bool blocked = Physics.Linecast(pivot, View.transform.position, WorldMask, QueryTriggerInteraction.Ignore);
             View.transform.position = snap || blocked ? desired : Vector3.Lerp(View.transform.position, desired, 1 - Mathf.Exp(-20 * Time.deltaTime));
             View.transform.rotation = rotation;
+        }
+
+        internal void SetHiddenCamera(Vector3? position)
+        {
+            hidingView = position;
+            foreach (var renderer in avatarRenderers) renderer.enabled = !FirstPerson && !hidingView.HasValue;
+            if (View != null) UpdateCamera(true);
         }
 
         internal void SetCrouched(bool crouch)
@@ -279,7 +302,7 @@ namespace HideIT
         public void ToggleCamera()
         {
             FirstPerson = !FirstPerson;
-            foreach (var renderer in avatarRenderers) renderer.enabled = !FirstPerson;
+            foreach (var renderer in avatarRenderers) renderer.enabled = !FirstPerson && !hidingView.HasValue;
             if (viewArms != null) viewArms.enabled = FirstPerson && Holding;
             if (View != null) UpdateCamera(true);
         }

@@ -8,7 +8,6 @@ namespace HideIT
     {
         public static readonly Vector3 PlayerSpawn = new Vector3(-1.65f,.045f,-8.15f);
         public static readonly Vector3 BodySpawn = new Vector3(.35f,.64f,-6.55f);
-        public static readonly Bounds DeliveryBounds = new Bounds(new Vector3(0,1.45f,16.2f),new Vector3(5.7f,3.3f,3.15f));
         const float WallHeight = 3.25f;
         const float WallThickness = .17f;
         static readonly Color Metal = new Color(.115f,.15f,.14f);
@@ -56,7 +55,7 @@ namespace HideIT
             Partition(false,7.5f,-12,-3.1f,-8.9f,-5.6f);
             Partition(false,6.9f,3.1f,12,8.8f,11.55f);
             Partition(false,14,-12,12,-9.5f,-6.2f,-1.6f,1.6f,8.8f,11.55f);
-            Wall(true,10.30f,7.58f,13.72f);
+            Wall(true,10.30f,8.28f,10.24f);
 
             // Tall screens sit outside the walking lines and give a break in the sight cones.
             Screen(-1.80f,1.5f,1.5f,0); Screen(1.78f,8.1f,1.55f,0);
@@ -88,30 +87,33 @@ namespace HideIT
             Sign("CENTRAL HALL",0,-4.15f,180,SignIvory);
             Sign("TREATMENT",8.08f,-4.15f,180,SignIvory);
             Sign("SERVICE EXIT",0,13.85f,180,SignGreen);
-            Sign("DROP ZONE",0,17.82f,180,SignGreen);
+            Sign("WASTE BAY",0,17.82f,180,SignGreen);
             Sign("SERVICE EXIT",-7.85f,13.85f,180,SignGreen);
             Sign("SERVICE EXIT",10.17f,13.85f,180,SignGreen);
             Sign("SERVICE PASSAGE",10.17f,6.74f,180,SignGreen);
-            ExitMarking();
+            ServiceShutter();
 
             Lighting();
             Physics.SyncTransforms();
         }
 
         public AsylumGuard[] CreatePatrols(CarryLabBootstrap mission) => new[] {
-            Patrol(mission,"Hall patrol",1.30f,7.3f,new Vector2(.35f,9.9f),new Vector2(.35f,12.6f),
-                new Vector2(-.70f,12.6f),new Vector2(-.70f,3.05f),new Vector2(.35f,3.05f)),
-            Patrol(mission,"West ward patrol",1.18f,6.7f,new Vector2(-9.65f,10.0f),new Vector2(-9.65f,12.95f),
-                new Vector2(-7.12f,12.95f),new Vector2(-7.12f,8.72f),new Vector2(-9.65f,8.72f)),
-            Patrol(mission,"Treatment patrol",1.21f,6.7f,new Vector2(9.85f,8.2f),new Vector2(9.85f,12.6f),
-                new Vector2(7.35f,12.6f),new Vector2(7.35f,8.2f))
+            Patrol(mission,"Hall patrol",1.39f,7.3f,new Vector2(.35f,9.9f),new Vector2(.35f,12.6f),
+                new Vector2(-.70f,15.16f),new Vector2(3.6f,15.55f),new Vector2(.35f,13.0f),
+                new Vector2(.35f,-2.06f),new Vector2(-5.82f,.02f)),
+            Patrol(mission,"West ward patrol",1.21f,6.7f,new Vector2(-9.65f,10.0f),new Vector2(-8.14f,13.02f),
+                new Vector2(-7.83f,15.75f),new Vector2(-5.85f,15.64f),new Vector2(-7.83f,12.44f),
+                new Vector2(-8.07f,6.12f),new Vector2(-8.67f,1.90f),new Vector2(-5.20f,-1.88f)),
+            Patrol(mission,"Treatment patrol",1.28f,7.0f,new Vector2(9.72f,8.15f),new Vector2(11.12f,10.72f),
+                new Vector2(10.88f,14.95f),new Vector2(6.0f,16.35f),new Vector2(10.81f,14.89f),
+                new Vector2(9.02f,10.38f),new Vector2(9.42f,5.69f),new Vector2(5.08f,3.96f),new Vector2(7.87f,-1.85f))
         };
 
         AsylumGuard Patrol(CarryLabBootstrap mission,string name,float speed,float range,params Vector2[] route)
         {
             var guard = new GameObject(name).AddComponent<AsylumGuard>();
             guard.transform.SetParent(transform,false);
-            guard.Initialize(mission,route,speed,range);
+            guard.Initialize(mission,mission.Navigation,route,speed,range);
             return guard;
         }
 
@@ -208,19 +210,8 @@ namespace HideIT
             if (font == signFont) signMaterial.mainTexture = font.material.mainTexture;
         }
 
-        void ExitMarking()
+        void ServiceShutter()
         {
-            var bounds = DeliveryBounds;
-            Vector3 center = bounds.center;
-            center.y = .021f;
-            var green = new Color(.19f,.74f,.50f);
-            for (int sign = -1; sign <= 1; sign += 2)
-            {
-                LabGeometry.Box(transform,"Drop zone stripe",center + Vector3.right*(bounds.extents.x*sign),
-                    new Vector3(.10f,.018f,bounds.size.z),green,false);
-                LabGeometry.Box(transform,"Drop zone stripe",center + Vector3.forward*(bounds.extents.z*sign),
-                    new Vector3(bounds.size.x,.018f,.10f),green,false);
-            }
             LabGeometry.Box(transform,"Service shutter",new Vector3(0,1.42f,17.88f),new Vector3(3.4f,2.84f,.15f),Metal,false);
             for (int i = 0; i < 11; i++)
                 LabGeometry.Box(transform,"Shutter rib",new Vector3(0,.24f+i*.238f,17.786f),
