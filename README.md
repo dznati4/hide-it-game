@@ -4,11 +4,12 @@
 
 Build the mechanic, verify it, then move to the next system. Art comes later.
 
-## Current playtest: Asylum / Night Shift
+## Current playtest
 
 Pick one of five masked characters and stash the body in the service dumpster.
-The central corridor is the shortest route. The west ward and treatment wing give you more
-cover, and all routes to the dumpster cross a patrol area.
+Choose **Asylum** for the ward and its side corridors, or **Garage** for a lower-level parking
+deck with parked cars, a security booth, and a maintenance passage. Both missions cross patrol
+areas before the loading bay. Use **Main Menu** from a pause or result screen to switch maps.
 
 The floor cones show where guards can see. When a guard spots you, the cone turns red and the
 guard gives chase. Break line of sight before hiding in a closet or under a bed. Guards who see
@@ -20,7 +21,7 @@ The ward uses the free [PSX Asylum Kit by Harning](https://harning.itch.io/psx-a
 See the [current export status](EXPORT_STATUS.md) for build and test results.
 
 To play the built prototype directly, double-click **Play Hide iT.cmd**.
-Keep the executable together with all adjacent files in `Builds/Playtest-0.0.9`.
+Keep the executable together with all adjacent files in `Builds/Playtest-0.0.10`.
 
 ## Open and play
 
@@ -28,7 +29,7 @@ Keep the executable together with all adjacent files in `Builds/Playtest-0.0.9`.
 2. Sign in and activate your own Unity license. No paid assets are required.
 3. Add this `hide-it` directory as an existing project in Hub, or double-click `Open Hide iT.cmd`.
 4. If the local art files are missing, follow the import steps below. Choose **Hide iT → Open Playtest**, then press **Play**.
-5. Click a name or use the arrow keys to choose a character, then press Enter or click **Enter Asylum**.
+5. Choose a character and a map, then press Enter or click **Start Mission**.
 
 The initial scene is included in the project. The room is generated when Play starts,
 so only a marker in the scene's Hierarchy in Edit mode is expected.
@@ -73,6 +74,17 @@ Download `PSX_Asylum_Kit_Free_v1.0.zip` from Harning's page and run the importer
 
 The kit lives in a local-only Unity Resources folder under its game-use license.
 
+For the garage, get the free City and Submarine samples from Zenthrall Games and keep the ZIPs intact.
+[City sample](https://zenthrall.itch.io/ultimate-psx-city-pack-free-sample)
+[Submarine sample](https://zenthrall.itch.io/psx-submarine-kit-free-sample)
+
+```powershell
+blender --background --factory-startup --python-exit-code 1 --python art/blender/import_psx_garage.py -- --city 'C:\path\PSX_City_Pack_FREE_SAMPLE.zip' --submarine 'C:\path\PSX_Submarine_Kit_FREE_Sample.zip'
+```
+
+Unity imports the generated FBX models and albedo textures from the local `GarageKit` folder.
+The Blender script imports a selected set of scenery. Base game controls and objectives are available in both maps.
+
 ## Validate this milestone before adding networking
 
 In Unity: **Window → General → Test Runner → PlayMode → Run All**.
@@ -86,12 +98,13 @@ From PowerShell (close the editor first):
 .\scripts\unity.ps1 -Action Test
 .\scripts\unity.ps1 -Action Build
 .\scripts\smoke.ps1
+.\scripts\smoke.ps1 -Garage
 .\scripts\smoke.ps1 -Lab
 ```
 
 For a custom editor location, add `-Editor 'D:\...\Editor\Unity.exe'`.
 Test reports and logs go to `TestResults/`; a successful build goes to
-`Builds/Playtest-0.0.9/Hide iT.exe`. These outputs are ignored by Git.
+`Builds/Playtest-0.0.10/Hide iT.exe`. These outputs are ignored by Git.
 Run the executable with `-hideit-lab` to open the original Carry Lab for physics practice.
 
 Manual acceptance:

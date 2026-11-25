@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
-const skip = new Set(['__pycache__', 'node_modules', '.git', '.tools', 'CharactersPSX', 'CharactersPSX.meta', 'AsylumKit', 'AsylumKit.meta']);
+const skip = new Set(['__pycache__', 'node_modules', '.git', '.tools', 'CharactersPSX', 'CharactersPSX.meta', 'AsylumKit', 'AsylumKit.meta', 'GarageKit', 'GarageKit.meta']);
 const extensions = new Set(['.cs','.meta','.png','.fbx','.blend','.svg','.py','.md','.json','.asset','.asmdef','.txt','.cmd','.ps1','.cjs','.unity','.prefab','.mat','.obj','.target']);
 const files = [];
 function walk(folder) {

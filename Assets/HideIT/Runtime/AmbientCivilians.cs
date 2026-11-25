@@ -26,7 +26,7 @@ namespace HideIT
         string previousId;
         float untilEntrance = 5;
         int nextLane;
-        bool intakeRoutes;
+        HideItStage stage = HideItStage.CarryLab;
         public int CompletedPasses { get; private set; }
         public int ActiveCount { get; private set; }
         public Vector3 LastWalkerPosition { get; private set; }
@@ -58,7 +58,8 @@ namespace HideIT
             untilEntrance = Random.Range(12f, 19f);
         }
 
-        public void UseIntakeRoutes() { intakeRoutes = true; }
+        public void UseIntakeRoutes() { stage = HideItStage.Asylum; }
+        public void UseGarageRoutes() { stage = HideItStage.Garage; }
 
         public void ResetRoutes()
         {
@@ -82,8 +83,12 @@ namespace HideIT
             if (prefab == null) return false;
             previousId = id;
             float direction = lane == 0 ? 1 : -1;
-            float endX = intakeRoutes ? 6f : EndX;
-            float depth = intakeRoutes ? (lane == 0 ? -8.83f : -7.03f) : LaneDepths[lane];
+            float endX = stage == HideItStage.CarryLab ? EndX : 6f;
+            float depth = stage switch {
+                HideItStage.Garage => lane == 0 ? -9.16f : -8.20f,
+                HideItStage.Asylum => lane == 0 ? -8.83f : -7.03f,
+                _ => LaneDepths[lane]
+            };
             var start = new Vector3(-endX * direction, .01f, depth);
             var end = new Vector3(endX * direction, .01f, depth);
             var model = Instantiate(prefab, start, Quaternion.LookRotation(end - start), transform);

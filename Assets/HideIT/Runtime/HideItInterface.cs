@@ -49,10 +49,20 @@ namespace HideIT
             Fill(new Rect(73,88,5,544),Mint);
             Write(new Rect(112,120,425,30),"ZANETTIZONEAI    /    PLAYTEST " + Application.version,smallType,Muted);
             Write(new Rect(107,159,420,106),"Hide iT",titleType,TextColor);
-            Write(new Rect(112,285,425,44),MissionName,sectionType,Mint);
-            Write(new Rect(112,353,423,36),InAsylum ? "Stash the body in the service dumpster." : "Bring the body to the green zone.",rowType,TextColor);
-            if (Button(new Rect(112,434,426,56),InAsylum ? "ENTER ASYLUM   [ENTER]" : "ENTER CARRY LAB   [ENTER]",true)) Begin();
-            if (Button(new Rect(112,503,426,48),"CONTROLS")) ShowGuide(true);
+            Write(new Rect(112,275,425,43),StageName(CurrentStage),sectionType,Mint);
+            var briefing = CurrentStage switch {
+                HideItStage.Garage => "Cross the garage to the loading bay dumpster.",
+                HideItStage.Asylum => "Stash the body in the service dumpster.",
+                _ => "Bring the body to the green zone."
+            };
+            Write(new Rect(112,326,423,34),briefing,rowType,TextColor);
+            if (StealthMission)
+            {
+                if (Button(new Rect(112,376,208,43),"ASYLUM",CurrentStage == HideItStage.Asylum)) SelectStage(HideItStage.Asylum);
+                if (Button(new Rect(330,376,208,43),"GARAGE",CurrentStage == HideItStage.Garage)) SelectStage(HideItStage.Garage);
+            }
+            if (Button(new Rect(112,447,426,56),"START MISSION   [ENTER]",true)) Begin();
+            if (Button(new Rect(112,516,426,48),"CONTROLS")) ShowGuide(true);
             DrawRoster(new Rect(626,88,581,544));
         }
 
@@ -60,12 +70,13 @@ namespace HideIT
         {
             Veil(.69f);
             Panel(new Rect(409,122,462,479));
-            Write(new Rect(446,153,387,30),MissionName,smallType,Muted);
+            Write(new Rect(446,153,387,30),StageName(CurrentStage),smallType,Muted);
             Write(new Rect(445,186,390,58),"Paused",sectionType,TextColor);
             if (Button(new Rect(445,264,390,52),"RESUME   [ESC]",true)) Pause(false);
             if (Button(new Rect(445,327,390,48),"CHANGE CHARACTER")) ShowPauseOutfits(true);
             if (Button(new Rect(445,386,390,48),"CONTROLS")) ShowGuide(true);
             if (Button(new Rect(445,445,390,48),"RESTART MISSION")) Retry();
+            if (Button(new Rect(445,504,390,48),"MAIN MENU")) ReturnToMenu();
         }
 
         void DrawPauseRoster()
@@ -104,12 +115,12 @@ namespace HideIT
             GuideRow(244,318,"Shift","Run");
             GuideRow(244,367,"Ctrl / C","Crouch");
             GuideRow(244,416,"V","Switch camera");
-            GuideRow(666,220,"E",InAsylum ? "Grab, stash, hide or pick up" : "Grab or release");
+            GuideRow(666,220,"E",StealthMission ? "Grab, stash, hide or pick up" : "Grab or release");
             GuideRow(666,269,"Q","Drop the body");
             GuideRow(666,318,"Hold LMB","Raise your grip");
-            if (InAsylum) GuideRow(666,367,"G","Throw a rock where you aim");
+            if (StealthMission) GuideRow(666,367,"G","Throw a rock where you aim");
             GuideRow(666,416,"R / Esc","Restart / Pause");
-            if (InAsylum) Write(new Rect(244,484,793,40),"Break line of sight before hiding. Rock impacts draw nearby guards.",rowType,Muted);
+            if (StealthMission) Write(new Rect(244,484,793,40),"Break line of sight before hiding. Rock impacts draw nearby guards.",rowType,Muted);
             if (Button(new Rect(244,554,793,50),"BACK   [ESC]",true)) ShowGuide(false);
         }
 
@@ -123,7 +134,7 @@ namespace HideIT
         void DrawHud()
         {
             var actions = Interactions;
-            DrawTag(new Rect(18,16,206,32),InAsylum ? "STASH THE BODY" : "BRING BODY TO EXIT",Mint);
+            DrawTag(new Rect(18,16,206,32),StealthMission ? "STASH THE BODY" : "BRING BODY TO EXIT",Mint);
             if (actions != null) DrawTag(new Rect(1145,16,117,32),$"{actions.Rocks:00}  ROCKS",TextColor);
             bool chase = false, search = false, body = false;
             float distracted = 0;
@@ -154,13 +165,14 @@ namespace HideIT
         void DrawResult()
         {
             Veil(.63f);
-            Panel(new Rect(368,218,544,281));
+            Panel(new Rect(368,218,544,298));
             Color highlight = Caught ? Alarm : Mint;
             Fill(new Rect(368,218,544,3),highlight);
-            Write(new Rect(406,248,453,65),Caught ? "Caught" : InAsylum ? "Body stashed" : "Level complete",sectionType,highlight);
-            string description = Caught ? CaughtReason : InAsylum ? "Level complete" : "The body reached the drop zone.";
+            Write(new Rect(406,248,453,65),Caught ? "Caught" : StealthMission ? "Body stashed" : "Level complete",sectionType,highlight);
+            string description = Caught ? CaughtReason : StealthMission ? "Level complete" : "The body reached the drop zone.";
             Write(new Rect(406,323,453,45),description,rowType,TextColor);
-            if (Button(new Rect(407,398,466,54),"RESTART   [R]",true)) Retry();
+            if (Button(new Rect(407,398,226,54),"RESTART   [R]",true)) Retry();
+            if (Button(new Rect(645,398,228,54),"MAIN MENU")) ReturnToMenu();
         }
 
         void DrawTag(Rect rect,string value,Color color)

@@ -1,4 +1,8 @@
 @echo off
+if exist "%~dp0Builds\Playtest-0.0.10\Hide iT.exe" (
+  start "Hide iT" "%~dp0Builds\Playtest-0.0.10\Hide iT.exe" -force-d3d11
+  exit /b
+)
 if exist "%~dp0Builds\Playtest-0.0.9\Hide iT.exe" (
   start "Hide iT" "%~dp0Builds\Playtest-0.0.9\Hide iT.exe" -force-d3d11
   exit /b

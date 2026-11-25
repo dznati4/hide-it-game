@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([switch]$Lab)
+param([switch]$Lab,[switch]$Garage)
 
 $ErrorActionPreference = 'Stop'
 $hideItProject = Split-Path -Parent $PSScriptRoot
@@ -8,7 +8,8 @@ $hideItVersion = [regex]::Match($hideItSettings, '(?m)^  bundleVersion: ([\d.]+)
 if (!$hideItVersion) { throw 'Could not read the build version.' }
 $hideItExecutable = Join-Path $hideItProject "Builds\Playtest-$hideItVersion\Hide iT.exe"
 if (!(Test-Path -LiteralPath $hideItExecutable)) { throw 'Build the Windows player first.' }
-$hideItOutput = Join-Path $hideItProject $(if ($Lab) { 'TestResults\smoke-lab' } else { 'TestResults\smoke' })
+if ($Lab -and $Garage) { throw 'Choose one mission to test.' }
+$hideItOutput = Join-Path $hideItProject $(if ($Lab) { 'TestResults\smoke-lab' } elseif ($Garage) { 'TestResults\smoke-garage' } else { 'TestResults\smoke' })
 New-Item -ItemType Directory -Path $hideItOutput -Force | Out-Null
 $hideItResult = Join-Path $hideItOutput 'result.txt'
 if (Test-Path -LiteralPath $hideItResult) { Remove-Item -LiteralPath $hideItResult }
@@ -18,6 +19,7 @@ $hideItArguments = @(
     '-logFile', ('"' + (Join-Path $hideItOutput 'player.log') + '"')
 )
 if ($Lab) { $hideItArguments += '-hideit-lab' }
+if ($Garage) { $hideItArguments += '-hideit-garage' }
 # Run rendered: Unity batch mode intentionally produces black screenshots.
 # The automated mode leaves the cursor alone and ignores desktop keyboard input.
 $hideItProcess = Start-Process -FilePath $hideItExecutable -ArgumentList $hideItArguments -PassThru
@@ -27,7 +29,7 @@ if (!$hideItProcess.WaitForExit(60000)) {
 }
 if ($hideItProcess.ExitCode -ne 0 -or !(Test-Path -LiteralPath $hideItResult)) {
     if (Test-Path -LiteralPath $hideItResult) { Get-Content -LiteralPath $hideItResult | Write-Output }
-    throw 'Standalone acceptance failed. See TestResults/smoke/player.log.'
+    throw "Standalone acceptance failed. See $hideItOutput\player.log."
 }
 $hideItOutcome = Get-Content -LiteralPath $hideItResult -Raw
 if (!$hideItOutcome.StartsWith('PASS:')) { throw $hideItOutcome }

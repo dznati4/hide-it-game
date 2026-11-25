@@ -97,6 +97,23 @@ namespace HideIT
             Physics.SyncTransforms();
         }
 
+        public void ConfigureInteractions(CarryLabBootstrap mission,AsylumInteractions actions)
+        {
+            actions.Build(mission,new Vector3(.15f,0,16.65f));
+            actions.AddCloset(-1.85f,-5.03f,0);
+            actions.AddCloset(-4.46f,2.77f,90);
+            actions.AddCloset(4.22f,8.24f,-90);
+            actions.AddCloset(-9.88f,15.83f,0);
+            actions.AddBedHide(new Vector3(-9.75f,0,-1.75f),new Vector3(-9.75f,0,-.92f));
+            actions.AddBedHide(new Vector3(10.72f,0,.40f),new Vector3(9.96f,0,.40f));
+            actions.AddBedHide(new Vector3(-10.7f,0,12.4f),new Vector3(-9.94f,0,12.4f));
+            actions.AddPickup(new Vector3(.98f,.12f,-8.5f));
+            actions.AddPickup(new Vector3(-6.77f,.12f,1.13f));
+            actions.AddPickup(new Vector3(6.06f,.12f,4.66f));
+            actions.AddPickup(new Vector3(10.04f,.12f,11.45f));
+            actions.AddPickup(new Vector3(-5.80f,.12f,15.70f));
+        }
+
         public AsylumGuard[] CreatePatrols(CarryLabBootstrap mission) => new[] {
             Patrol(mission,"Hall patrol",1.39f,7.3f,new Vector2(.35f,9.9f),new Vector2(.35f,12.6f),
                 new Vector2(-.70f,15.16f),new Vector2(3.6f,15.55f),new Vector2(.35f,13.0f),

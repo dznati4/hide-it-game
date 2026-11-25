@@ -2,6 +2,8 @@ using UnityEngine;
 
 namespace HideIT
 {
+    public enum HideItStage { Asylum, Garage, CarryLab }
+
     public sealed partial class CarryLabBootstrap : MonoBehaviour
     {
         public static CarryLabBootstrap Instance { get; private set; }
@@ -11,7 +13,8 @@ namespace HideIT
         public bool Paused { get; private set; }
         public bool Delivered { get; private set; }
         public bool Caught { get; private set; }
-        public bool InAsylum { get; private set; }
+        public HideItStage CurrentStage { get; private set; }
+        bool StealthMission => CurrentStage != HideItStage.CarryLab;
         public bool LegacyMode { get; set; }
         public bool Automated { get; private set; }
         public float Elapsed { get; private set; }
@@ -24,9 +27,22 @@ namespace HideIT
         public AsylumInteractions Interactions { get; private set; }
         public Bounds DropZone => CarryLabRoom.DeliveryBounds;
         public string CaughtReason { get; private set; }
-        Vector3 PlayerSpawn => InAsylum ? AsylumWard.PlayerSpawn : CarryLabRoom.PlayerSpawn;
-        Vector3 BodySpawn => InAsylum ? AsylumWard.BodySpawn : CarryLabRoom.BodySpawn;
-        string MissionName => InAsylum ? "ASYLUM / NIGHT SHIFT" : "CARRY LAB";
+        Vector3 PlayerSpawn => CurrentStage switch {
+            HideItStage.Garage => ParkingGarage.PlayerSpawn,
+            HideItStage.Asylum => AsylumWard.PlayerSpawn,
+            _ => CarryLabRoom.PlayerSpawn
+        };
+        Vector3 BodySpawn => CurrentStage switch {
+            HideItStage.Garage => ParkingGarage.BodySpawn,
+            HideItStage.Asylum => AsylumWard.BodySpawn,
+            _ => CarryLabRoom.BodySpawn
+        };
+        static string StageName(HideItStage stage) => stage switch {
+            HideItStage.Garage => "Garage / Lower Level",
+            HideItStage.Asylum => "Asylum / Night Shift",
+            _ => "Carry Lab"
+        };
+        GameObject environment;
         CharacterSelectionPreview characterPreview;
         bool choosingOutfit, showingGuide;
         float noticeTime;
@@ -48,19 +64,11 @@ namespace HideIT
             Automated = System.Array.IndexOf(System.Environment.GetCommandLineArgs(), "-hideit-smoke") >= 0;
 #endif
             var args = System.Environment.GetCommandLineArgs();
-            InAsylum = !LegacyMode && System.Array.IndexOf(args,"-hideit-lab") < 0;
+            CurrentStage = LegacyMode || System.Array.IndexOf(args,"-hideit-lab") >= 0 ? HideItStage.CarryLab :
+                System.Array.IndexOf(args,"-hideit-garage") >= 0 ? HideItStage.Garage : HideItStage.Asylum;
             Time.timeScale = 1;
             Time.fixedDeltaTime = 1f / 60f;
             Application.targetFrameRate = 120;
-            var environment = new GameObject(InAsylum ? "Asylum ward" : "Carry lab room");
-            environment.transform.SetParent(transform,false);
-            AsylumWard ward = null;
-            if (InAsylum)
-            {
-                ward = environment.AddComponent<AsylumWard>();
-                ward.Build();
-            }
-            else environment.AddComponent<CarryLabRoom>().Build();
             Body = new GameObject("Ragdoll test subject").AddComponent<RagdollBody>();
             Body.transform.SetParent(transform);
             Body.Build(BodySpawn);
@@ -68,26 +76,58 @@ namespace HideIT
             Player = new GameObject("Local test player").AddComponent<CarryLabPlayer>();
             Player.transform.SetParent(transform);
             Player.Build(Body);
-            Player.ResetAt(PlayerSpawn);
             characterPreview = new GameObject("Character selection preview").AddComponent<CharacterSelectionPreview>();
             characterPreview.transform.SetParent(transform, false);
             SelectOutfit(CharacterArtCatalog.SavedSelection);
-            if (ward != null)
-            {
-                Interactions = environment.AddComponent<AsylumInteractions>();
-                Interactions.Build(this);
-                Player.Interactions = Interactions;
-                Navigation = new AsylumNavigation();
-                Guards = ward.CreatePatrols(this);
-            }
+            BuildStage(CurrentStage);
             SetCursor(false);
 #if DEVELOPMENT_BUILD || UNITY_EDITOR
             if (Automated)
             {
-                if (InAsylum) gameObject.AddComponent<AsylumSmokeTest>();
-                else gameObject.AddComponent<CarryLabSmokeTest>();
+                if (CurrentStage == HideItStage.CarryLab) gameObject.AddComponent<CarryLabSmokeTest>();
+                else if (CurrentStage == HideItStage.Asylum) gameObject.AddComponent<AsylumSmokeTest>();
+                else gameObject.AddComponent<GarageSmokeTest>();
             }
 #endif
+        }
+
+        void BuildStage(HideItStage stage)
+        {
+            if (environment != null)
+            {
+                environment.SetActive(false);
+                Destroy(environment);
+            }
+            CurrentStage = stage;
+            environment = new GameObject(StageName(stage));
+            environment.transform.SetParent(transform,false);
+            if (StealthMission)
+            {
+                Interactions = environment.AddComponent<AsylumInteractions>();
+                if (stage == HideItStage.Garage)
+                {
+                    var garage = environment.AddComponent<ParkingGarage>();
+                    garage.Build();
+                    garage.ConfigureInteractions(this,Interactions);
+                    Physics.SyncTransforms();
+                    Navigation = new AsylumNavigation();
+                    Guards = garage.CreatePatrols(this);
+                }
+                else
+                {
+                    var ward = environment.AddComponent<AsylumWard>();
+                    ward.Build();
+                    ward.ConfigureInteractions(this,Interactions);
+                    Physics.SyncTransforms();
+                    Navigation = new AsylumNavigation();
+                    Guards = ward.CreatePatrols(this);
+                }
+            }
+            else environment.AddComponent<CarryLabRoom>().Build();
+            Player.View.clearFlags = stage == HideItStage.Garage ? CameraClearFlags.SolidColor : CameraClearFlags.Skybox;
+            Player.View.backgroundColor = stage == HideItStage.Garage ? new Color(.11f,.15f,.19f) : new Color(.26f,.31f,.36f);
+            Player.Interactions = Interactions;
+            ResetLab();
         }
 
         void Update()
@@ -109,7 +149,7 @@ namespace HideIT
                 }
                 return;
             }
-            if (Caught || (InAsylum && Delivered))
+            if (Caught || (StealthMission && Delivered))
             {
                 if (!Automated && (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Return))) Retry();
                 return;
@@ -135,7 +175,7 @@ namespace HideIT
                 Notice = "The mission was reset after a physics error.";
                 noticeTime = 4;
             }
-            if (!InAsylum && !Delivered && Body.IsEntirelyIn(DropZone))
+            if (!StealthMission && !Delivered && Body.IsEntirelyIn(DropZone))
             {
                 Delivered = true;
                 Debug.Log("HIDEIT_LAB_DELIVERED");
@@ -150,7 +190,28 @@ namespace HideIT
             if (!Automated && !Application.isBatchMode) CharacterArtCatalog.SaveSelection(SelectedOutfit);
             characterPreview.SetVisible(false);
             Civilians = gameObject.AddComponent<AmbientCivilians>();
-            if (InAsylum) Civilians.UseIntakeRoutes();
+            if (CurrentStage == HideItStage.Asylum) Civilians.UseIntakeRoutes();
+            if (CurrentStage == HideItStage.Garage) Civilians.UseGarageRoutes();
+            Pause(false);
+        }
+
+        public void SelectStage(HideItStage stage)
+        {
+            if (Started || !StealthMission || stage == HideItStage.CarryLab || stage == CurrentStage) return;
+            BuildStage(stage);
+        }
+
+        public void ReturnToMenu()
+        {
+            if (!Started) return;
+            ResetLab();
+            if (Civilians != null)
+            {
+                Civilians.enabled = false;
+                Destroy(Civilians);
+                Civilians = null;
+            }
+            Started = false;
             Pause(false);
         }
 
@@ -171,7 +232,7 @@ namespace HideIT
 
         public void Pause(bool pause)
         {
-            if (Caught || (InAsylum && Delivered)) return;
+            if (Caught || (StealthMission && Delivered)) return;
             showingGuide = false;
             ShowPauseOutfits(false);
             Paused = pause;
@@ -207,7 +268,7 @@ namespace HideIT
 
         public void CompleteStash()
         {
-            if (Caught || !InAsylum || Delivered) return;
+            if (Caught || !StealthMission || Delivered) return;
             Delivered = true;
             Player.InputEnabled = false;
             SetCursor(false);
@@ -233,7 +294,7 @@ namespace HideIT
             Player.ResetAt(PlayerSpawn);
             Body.ResetAt(BodySpawn);
             foreach (var guard in Guards) guard.Rewind();
-            if (InAsylum && Civilians != null) Civilians.ResetRoutes();
+            if (Civilians != null) Civilians.ResetRoutes();
             Caught = false;
             CaughtReason = null;
             Delivered = false;

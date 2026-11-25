@@ -8,8 +8,8 @@ namespace HideIT
         public const int MaxRocks = 4;
         const float Reach = 1.32f;
         const int World = 1 << 0;
-        static readonly Vector3 DumpsterCenter = new Vector3(.15f,0,16.65f);
-        static readonly Vector3 DumpsterFront = DumpsterCenter-Vector3.forward*1.13f;
+        Vector3 dumpsterCenter;
+        Vector3 DumpsterFront => dumpsterCenter-Vector3.forward*1.13f;
         static readonly Color Steel = new Color(.13f,.28f,.23f);
         static readonly Color Rim = new Color(.38f,.54f,.43f);
         static readonly Color Stone = new Color(.55f,.52f,.39f);
@@ -38,32 +38,19 @@ namespace HideIT
             public Vector3 Position;
         }
 
-        public void Build(CarryLabBootstrap owner)
+        public void Build(CarryLabBootstrap owner,Vector3 center,Material dumpsterPaint = null)
         {
             mission = owner;
-            BuildDumpster();
-            BuildCloset(-1.85f,-5.03f,0);
-            BuildCloset(-4.46f,2.77f,90);
-            BuildCloset(4.22f,8.24f,-90);
-            BuildCloset(-9.88f,15.83f,0);
-            AddBedHide(new Vector3(-9.75f,0,-1.75f),new Vector3(-9.75f,0,-.92f));
-            AddBedHide(new Vector3(10.72f,0,.40f),new Vector3(9.96f,0,.40f));
-            AddBedHide(new Vector3(-10.7f,0,12.4f),new Vector3(-9.94f,0,12.4f));
-            AddPickup(new Vector3(.98f,.12f,-8.5f));
-            AddPickup(new Vector3(-6.77f,.12f,1.13f));
-            AddPickup(new Vector3(6.06f,.12f,4.66f));
-            AddPickup(new Vector3(10.04f,.12f,11.45f));
-            AddPickup(new Vector3(-5.80f,.12f,15.70f));
+            dumpsterCenter = center;
+            BuildDumpster(dumpsterPaint);
             click = MakeImpactSound();
-            ResetRun();
-            Physics.SyncTransforms();
         }
 
-        void BuildDumpster()
+        void BuildDumpster(Material paint)
         {
             var root = new GameObject("Service dumpster").transform;
             root.SetParent(transform,false);
-            root.position = DumpsterCenter;
+            root.position = dumpsterCenter;
             LabGeometry.Box(root,"Dumpster floor",new Vector3(0,.25f,0),new Vector3(2.62f,.17f,1.82f),Steel);
             for (int side = -1; side <= 1; side += 2)
             {
@@ -81,9 +68,12 @@ namespace HideIT
             for (int i = -3; i <= 3; i++)
                 LabGeometry.Box(lid,"Lid rib",new Vector3(i*.32f,.10f,-.88f),new Vector3(.044f,.035f,1.55f),Rim,false);
             LabGeometry.Box(root,"Deposit marker",new Vector3(0,.018f,-1.13f),new Vector3(2.62f,.026f,.09f),LabGeometry.Teal,false);
+            if (paint != null)
+                foreach (var renderer in root.GetComponentsInChildren<MeshRenderer>())
+                    if (renderer.sharedMaterial == LabGeometry.Material(Steel)) renderer.sharedMaterial = paint;
         }
 
-        void BuildCloset(float x,float z,float yaw)
+        public void AddCloset(float x,float z,float yaw)
         {
             var cabinet = new GameObject("Hiding closet").transform;
             cabinet.SetParent(transform,false);
@@ -97,17 +87,18 @@ namespace HideIT
             }
             for (int n = 0; n < 5; n++)
                 LabGeometry.Box(cabinet,"Vent",new Vector3(0,1.70f+n*.047f,-.316f),new Vector3(.57f,.013f,.015f),LabGeometry.Ink,false);
-            hidingSpots.Add(new HideSpot { Name = "Hide in closet", Entrance = cabinet.TransformPoint(0,0,-.74f),
-                ViewPoint = cabinet.TransformPoint(0,1.23f,-.34f), PeekYaw = yaw+180f });
+            AddHidingSpot("Hide in closet",cabinet.TransformPoint(0,0,-.74f),
+                cabinet.TransformPoint(0,1.23f,-.34f),yaw+180f);
         }
 
-        void AddBedHide(Vector3 bed,Vector3 entrance) => hidingSpots.Add(new HideSpot {
-            Name = "Hide under bed", Entrance = entrance,
-            ViewPoint = Vector3.Lerp(bed,entrance,.40f)+Vector3.up*.23f,
-            PeekYaw = Mathf.Atan2(entrance.x-bed.x,entrance.z-bed.z)*Mathf.Rad2Deg
-        });
+        public void AddBedHide(Vector3 bed,Vector3 entrance) =>
+            AddHidingSpot("Hide under bed",entrance,Vector3.Lerp(bed,entrance,.40f)+Vector3.up*.23f,
+                Mathf.Atan2(entrance.x-bed.x,entrance.z-bed.z)*Mathf.Rad2Deg);
 
-        void AddPickup(Vector3 position)
+        public void AddHidingSpot(string name,Vector3 entrance,Vector3 viewPoint,float yaw) =>
+            hidingSpots.Add(new HideSpot { Name = name,Entrance = entrance,ViewPoint = viewPoint,PeekYaw = yaw });
+
+        public void AddPickup(Vector3 position)
         {
             var model = LabGeometry.Shape(transform,"Pick up rocks",PrimitiveType.Sphere,position,new Vector3(.19f,.13f,.17f),Stone,false);
             pickups.Add(new Pickup { Model = model,Position = position });
@@ -233,7 +224,7 @@ namespace HideIT
             stashing = true;
             stashTimer = .62f;
             lid.localRotation = Quaternion.Euler(77,0,0);
-            mission.Body.ResetAt(DumpsterCenter+Vector3.up*1.46f);
+            mission.Body.ResetAt(dumpsterCenter+Vector3.up*1.46f);
         }
 
         void Update()
